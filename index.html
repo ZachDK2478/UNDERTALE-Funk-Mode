@@ -10,11 +10,16 @@
     <!-- Sets character encoding. -->
     <meta charset="UTF-8">
     <!-- Sets website scaling depending on device. -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/ZachDK2478/utfm-newsletter-spring2025/refs/heads/main/image/motivational-car.jpg">
+    <meta name="twitter:title" content="UNDERTALE: Funk-Mode Website"/>
+    <meta name="twitter:description" content="The official website of the UNDERTALE: Funk-Mode FNF Mod!"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <!-- Ignore the following meta code. -->
     <meta name="description"
         content="The official website for UNDERTALE: Funk-Mode, basically linking to each official newsletter, and some other important pages.!">
     <meta name="keywords" content="UNDERTALE, Funk-Mode, UTFM, FNF, Mod">
+    <link rel="stylesheet" href="fonts.css">
 
     <!-- Next up is the style code to edit the style of various functions in the site! This is very important. -->
 
@@ -133,10 +138,6 @@
                 }
 
             }
-
-
-
-
 
             #thebigBox {
                 width: 30vw;
@@ -297,8 +298,44 @@
 <main>
 
     <body>
+        <div id="soulBG">
+
+        </div>
+
+        <img src="images/main/mod-logo.png" id="logo" alt="Undertale: Funk-Mode Logo"
+            title="The official logo for UT:FM!">
+
+        <ul id='LINKS'>
+            <li onclick='window.location.href = "https://x.com/UTfunkmode"; '>
+                <img title="The official UNDERTALE: Funk-Mode Twitter account!"
+                    src="https://img.icons8.com/?size=100&id=60469&format=png&color=000000">
+                <p> * Discord </p>
+            </li>
+        </ul>
+
+        <audio autoplay id="myaudio" loop>
+            <source src="audio/menu/chillin" type="audio/flac">
+            Your browser does not support the audio element.
+        </audio>
+        <script>
+            var audio = document.getElementById("myaudio");
+            audio.volume = 0.5;
+            function playDaMusic() {
+                audio.currentTime = 0;
+                audio.play();
+                //  evil if (!navigator.userAgent.toLowerCase().includes('firefox')) console.log setTimeout(playDaMusic, audio.duration*1000); 
+            }
+
+            playDaMusic();
+            document.addEventListener('click', musicPlay);
+            function musicPlay() {
+                if (audio.currentTime == 0) playDaMusic();
+                document.removeEventListener('click', musicPlay);
+            }
+        </script>
+
         <div class="dts-text">
-        <p>This is a test message. Hooray!</p>
+            <p>This is a test message. Hooray!</p>
         </div>
     </body>
 </main>
