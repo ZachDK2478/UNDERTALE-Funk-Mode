@@ -1,11 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Create an audio element for the select sound
-    let selectSound = new Audio("audio/select-sound.mp3");
+    let selectSound = new Audio("audio/snd_select.wav");
 
-    // Add click event to all hyperlinks
     document.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", function (event) {
-            selectSound.play(); // Play sound when clicked
+            event.preventDefault(); // Stop immediate navigation
+            selectSound.play();
+
+            // Wait for 300ms (or sound duration) before navigating
+            setTimeout(() => {
+                window.location.href = link.href;
+            }, 400);
         });
     });
 });
