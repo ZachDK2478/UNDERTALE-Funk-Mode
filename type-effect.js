@@ -1,8 +1,4 @@
-console.log("JavaScript file loaded successfully!");
-
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("DOM fully loaded!");
-
     document.querySelectorAll(".textbox p").forEach((p, index) => {
         console.log(`Processing textbox #${index + 1}`);
 
@@ -19,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (i < textContent.length) {
                 p.innerHTML = textContent.substring(0, i + 1); // Preserve HTML while typing
                 i++;
-                setTimeout(typeWriter, 30); // Adjust speed here
+                setTimeout(typeWriter, 50); // Adjust speed here
             } else {
                 console.log(`Finished typing for textbox #${index + 1}`);
             }
