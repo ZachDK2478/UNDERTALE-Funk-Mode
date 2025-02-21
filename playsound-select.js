@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let selectSound = new Audio("audio/snd_select.mp3"); // Change to your correct file path
+    let selectSound = new Audio("audio/snd_select.mp3");
 
     document.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", function (event) {
             event.preventDefault(); // Prevent default navigation
+            selectSound.play(); // Play sound
 
-            // Open the link in a new tab FIRST
-            let newTab = window.open(link.href, "_blank");
-
-            // Play sound AFTER opening the new tab
-            selectSound.play();
+            // Open link in a new tab after a short delay
+            setTimeout(() => {
+                window.open(link.href, "_blank");
+            }, 500); // 500ms delay for sound effect
         });
     });
 });
