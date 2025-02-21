@@ -138,23 +138,37 @@
             let selectSound = document.getElementById("select-sound");
 
             document.querySelectorAll("a").forEach(link => {
-                link.addEventListener("click", async function (event) {
-                    event.preventDefault(); // Prevent immediate navigation
+                link.addEventListener("click", function (event) {
+                    event.preventDefault(); // Stop default link behavior
 
                     selectSound.currentTime = 0; // Reset sound
 
-                    try {
-                        await selectSound.play(); // Wait for sound to start
-                        setTimeout(() => {
-                            window.open(link.href, "_blank"); // Open link after short delay
-                        }, 250); // 250ms delay ensures sound plays first
-                    } catch (error) {
-                        console.log("Audio playback blocked by browser:", error);
-                        window.open(link.href, "_blank"); // Open link even if sound is blocked
+                    let playPromise = selectSound.play();
+
+                    if (playPromise !== undefined) {
+                        playPromise.then(() => {
+                            console.log("Sound played successfully!");
+
+                            // Force a small delay before opening the link
+                            setTimeout(() => {
+                                let newTab = window.open(link.href, "_blank");
+
+                                // Fallback: If new tab is blocked, alert the user
+                                if (!newTab) {
+                                    alert("Your browser blocked the new tab. Please allow pop-ups for this site.");
+                                }
+                            }, 500); // 500ms ensures the sound starts before opening the link
+                        }).catch(error => {
+                            console.log("Audio playback blocked by browser:", error);
+                            window.open(link.href, "_blank"); // Open the link anyway if sound is blocked
+                        });
+                    } else {
+                        window.open(link.href, "_blank"); // Open the link if playPromise is undefined
                     }
                 });
             });
         });
+
 
     </script>
 
