@@ -135,42 +135,15 @@
     <!-- JavaScript Inside HTML (No External JS File) -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            let bgMusic = document.getElementById("myaudio");
             let selectSound = document.getElementById("select-sound");
 
-            // Ensure background music starts and loops properly
-            bgMusic.volume = 0.5;
-            bgMusic.play().catch(error => console.log("Background music autoplay blocked:", error));
-
-            // Add event listener to all links
-            document.querySelectorAll("a").forEach(link => {
-                link.addEventListener("click", function (event) {
-                    event.preventDefault(); // Prevent immediate navigation
-
-                    // Play select sound and open link after delay
-                    selectSound.currentTime = 0;
-                    let playPromise = selectSound.play();
-
-                    if (playPromise !== undefined) {
-                        playPromise.then(() => {
-                            setTimeout(() => {
-                                window.open(link.href, "_blank");
-                            }, 200); // Short delay ensures sound plays first
-                        }).catch(error => {
-                            console.log("Audio playback blocked by browser:", error);
-                            window.open(link.href, "_blank"); // Open the link if sound is blocked
-                        });
-                    } else {
-                        window.open(link.href, "_blank"); // Open the link if playPromise is undefined
-                    }
+            document.addEventListener("click", function () {
+                selectSound.currentTime = 0;
+                selectSound.play().then(() => {
+                    console.log("Sound played successfully!");
+                }).catch(error => {
+                    console.log("Audio playback blocked:", error);
                 });
-            });
-
-            // Ensure background music resumes if the user interacts with the page
-            document.addEventListener('click', function () {
-                if (bgMusic.paused) {
-                    bgMusic.play();
-                }
             });
         });
 
