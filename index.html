@@ -109,6 +109,43 @@
         Your browser does not support the audio element.
     </audio>
 
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            let bgMusic = document.getElementById("myaudio");
+            let selectSound = document.getElementById("select-sound");
+
+            // Ensure background music starts and loops properly
+            bgMusic.volume = 0.5;
+
+            // Background music play triggered by user interaction (click)
+            document.addEventListener("click", function () {
+                if (bgMusic.paused) {
+                    bgMusic.play().catch(error => console.log("Background music autoplay blocked:", error));
+                }
+            });
+
+            // Apply sound effect to ALL links, not just one
+            document.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault(); // Stop default link behavior
+
+                    // Play select sound and open link after a small delay
+                    selectSound.currentTime = 0; // Reset sound
+                    selectSound.play().then(() => {
+                        // Open the link in a new tab after 250ms delay
+                        setTimeout(() => {
+                            window.open(link.href, "_blank");
+                        }, 250); // Ensures the sound plays first
+                    }).catch(error => {
+                        console.log("Audio playback blocked by browser:", error);
+                        window.open(link.href, "_blank"); // Open the link anyway if sound is blocked
+                    });
+                });
+            });
+        });
+    </script>
+
     <!-- ========== TEXTBOXES ========== -->
     <div class="textbox">
         <img class="character-icon" src="https://ik.imagekit.io/edq6pdk5b/image.png?updatedAt=1740085080880"
@@ -131,33 +168,6 @@
         <img class="character-icon" src="https://ik.imagekit.io/edq6pdk5b/gfrien4.png" alt="Gfriend-Icon-Worry">
         <p>Huh? What's that? What do you mean the website is unfinished?</p>
     </div>
-
-    <!-- JavaScript Inside HTML (No External JS File) -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let selectSound = document.getElementById("select-sound");
-
-            document.querySelectorAll("a").forEach(link => {
-                link.addEventListener("click", function (event) {
-                    event.preventDefault(); // Stop default link behavior
-
-                    selectSound.currentTime = 0; // Reset sound
-                    selectSound.play(); // Play sound immediately
-
-                    // Open the link in a new tab ONLY after the sound has started
-                    setTimeout(() => {
-                        let newTab = window.open(link.href, "_blank");
-
-                        // If pop-ups are blocked, show a message
-                        if (!newTab) {
-                            alert("Your browser blocked the new tab. Please allow pop-ups for this site.");
-                        }
-                    }, 500); // 500ms delay ensures sound plays before opening the tab
-                });
-            });
-        });
-    </script>
-
 
 </body>
 
