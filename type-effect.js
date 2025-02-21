@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (node.nodeType === Node.TEXT_NODE) {
                     nodes.push({ node, text: node.textContent });
                 } else {
-                    extractNodes(node); // Recurse for nested elements
+                    extractNodes(node); // Recursively process nested elements
                 }
             });
         }
