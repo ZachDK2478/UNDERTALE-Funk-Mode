@@ -2,32 +2,44 @@
 <html lang="en">
 
 <head>
-    <!-- Sets the title of the page at the top. -->
-    <title>UNDERTALE: Funk-Mode</title>
-    <!-- Sets the webpage favicon. -->
-    <link rel="shortcut icon" type="image/x-icon"
-        href="https://raw.githubusercontent.com/ZachDK2478/UNDERTALE-Funk-Mode/refs/heads/main/images/favicon/utfm-perseverance.ico">
-    <!-- Sets character encoding. -->
     <meta charset="UTF-8">
-    <!-- Sets website scaling depending on device. -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image"
-        content="https://raw.githubusercontent.com/ZachDK2478/utfm-newsletter-spring2025/refs/heads/main/image/motivational-car.jpg">
-    <meta name="twitter:title" content="UNDERTALE: Funk-Mode Website" />
-    <meta name="twitter:description" content="The official website of the UNDERTALE: Funk-Mode FNF Mod!" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <!-- Ignore the following meta code. -->
-    <meta name="description"
-        content="The official website for UNDERTALE: Funk-Mode, basically linking to each official newsletter, and some other important pages.!">
+    <meta name="description" content="The official website for UNDERTALE: Funk-Mode.">
     <meta name="keywords" content="UNDERTALE, Funk-Mode, UTFM, FNF, Mod">
+    
+    <!-- Open Graph (Social Media Embeds) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="UNDERTALE: Funk-Mode Website">
+    <meta name="twitter:description" content="The official website of the UNDERTALE: Funk-Mode FNF Mod!">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/ZachDK2478/utfm-newsletter-spring2025/refs/heads/main/image/motivational-car.jpg">
+    
+    <title>UNDERTALE: Funk-Mode</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/ZachDK2478/UNDERTALE-Funk-Mode/refs/heads/main/images/favicon/utfm-perseverance.ico">
+    
+    <!-- Fonts & Stylesheets -->
     <link rel="stylesheet" href="fonts.css">
+    
+    <!-- Scripts -->
     <script src="type-effect.js" defer></script>
     <script src="playsound-select.js" defer></script>
 
-    <!-- Next up is the style code to edit the style of various functions in the site! This is very important. -->
-
     <style>
-        /* Text style settings */
+        /* ========== GLOBAL STYLES ========== */
+        body {
+            background-image: url("images/bg/test-funkmodebg.png");
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* ========== TEXT STYLES ========== */
+        @font-face {
+            font-family: 'UndertaleFont';
+            src: url('https://raw.githubusercontent.com/ZachDK2478/UNDERTALE-Funk-Mode/main/fonts/DeterminationSansRegular.ttf') format('truetype');
+        }
+
         p {
             max-width: 850px;
             word-wrap: break-word;
@@ -36,145 +48,97 @@
             color: white;
         }
 
-        @font-face {
-            font-family: 'UndertaleFont';
-            src: url('https://raw.githubusercontent.com/ZachDK2478/UNDERTALE-Funk-Mode/main/fonts/DeterminationSansRegular.ttf') format('truetype'),
-                font-weight: normal;
-            font-style: normal;
-        }
-
-        /* Apply to the text box */
+        /* ========== TEXTBOX STYLES ========== */
         .textbox {
             font-family: 'UndertaleFont', 'Courier New', monospace;
-        }
-
-        body {
-
-            background-image: url("images/bg/test-funkmodebg.png");
-            background-attachment: fixed;
-            background-position: center;
-            -o-background-size: cover;
-            -moz-background-size: cover;
-            -webkit-background-size: cover;
-            background-size: cover;
-        }
-
-        /* Center the text box in the middle of the screen */
-        .textbox {
             position: relative;
             display: flex;
-            align-items: center; /* Align text and icon properly */
-            justify-content: flex-start; /* Make items align from left to right */
-            flex-direction: row; /* Ensures icon is on the left, text on the right */
-            
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: row;
             background-color: black;
             color: white;
             border: 4px solid white;
             padding: 15px;
-            font-family: 'UndertaleFont', 'Courier New', monospace;
             font-size: 30px;
             line-height: 1.5;
-            text-transform: normal;
-            
-            max-width: 50%;  /* Restricts width */
+            text-align: left;
+            max-width: 50%;
             min-width: 250px;
-            width: auto;  /* Adapts to text length */
-            
-            height: auto; /* Adjusts vertically */
-            max-height: 90vh; /* Prevents excessive height */
-            
-            text-align: left; /* Aligns text properly */
+            width: auto;
+            height: auto;
+            max-height: 90vh;
             margin: 20px auto;
-            
-            overflow: hidden; /* Prevents content from overflowing */
-            word-wrap: break-word; /* Ensures text stays inside */
+            overflow: hidden;
+            word-wrap: break-word;
         }
 
-        /* Style for character icons */
+        /* ========== CHARACTER ICON STYLES ========== */
         .character-icon {
-            max-width: 100%;  /* Prevents image from being too large */
-            widtht: 140px;
-            height: 116px;  /* Keeps aspect ratio */
-            object-fit: contain; /* Ensures it stays within its box */
-            image-rendering: pixelated; /* Keeps pixel art look */
-        }
-
-                /* Character icon stays on the left */
-        .character-icon {
-            width: 140px; /* Adjust size */
+            width: 140px;
             height: 116px;
-            image-rendering: pixelated; /* Keeps pixel art look */
-            margin-right: 15px; /* Adds space between the icon and text */
-        }
-        
-        /* Ensure text fills remaining space */
-        .textbox p {
-            flex: 1; /* Allows text to take remaining space */
+            image-rendering: pixelated;
+            object-fit: contain;
+            margin-right: 15px;
         }
 
-        /* Style for links inside text box */
+        /* ========== TEXTBOX LINK STYLES ========== */
         .textbox a {
-            color: #ffcc00; /* Undertale yellow link */
-            text-decoration: none; /* Removes underline */
+            color: #ffcc00;
+            text-decoration: none;
         }
 
         .textbox a:hover {
-            text-decoration: underline; /* Adds underline on hover */
+            text-decoration: underline;
         }
     </style>
 </head>
 
-<!-- Now here's the real meat and potatoes of the site, the site's actual content! -->
+<body>
 
-<main>
+    <!-- Background Audio -->
+    <audio autoplay id="myaudio" loop>
+        <source src="audio/menu/home-menu-chillmix.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
-    <body>
-        <audio autoplay id="myaudio" loop>
-            <source src="audio/menu/home-menu-chillmix.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        <script>
-            var audio = document.getElementById("myaudio");
-            audio.volume = 0.5;
-            function playDaMusic() {
-                audio.currentTime = 0;
-                audio.play();
-                //  evil if (!navigator.userAgent.toLowerCase().includes('firefox')) console.log setTimeout(playDaMusic, audio.duration*1000); 
-            }
+    <script>
+        var audio = document.getElementById("myaudio");
+        audio.volume = 0.5;
 
-            playDaMusic();
-            document.addEventListener('click', musicPlay);
-            function musicPlay() {
-                if (audio.currentTime == 0) playDaMusic();
-                document.removeEventListener('click', musicPlay);
-            }
-        </script>
+        function playDaMusic() {
+            audio.currentTime = 0;
+            audio.play();
+        }
 
-        <div class="textbox">
-            <img class="character-icon" src="https://ik.imagekit.io/edq6pdk5b/image.png?updatedAt=1740085080880" alt="Gfriend-Icon">
-            <p>Hi there! Welcome to the official UNDERTALE: Funk-Mode website!</p>
-        </div>
+        playDaMusic();
+        document.addEventListener('click', musicPlay);
+        function musicPlay() {
+            if (audio.currentTime == 0) playDaMusic();
+            document.removeEventListener('click', musicPlay);
+        }
+    </script>
 
-        <div class="textbox">
-            <img class="character-icon" src="https://ik.imagekit.io/edq6pdk5b/gfriend3.png" alt="Gfriend-Icon-Curious">
-            <p>I don't know how you got access to this site, as we haven't given the link out to anyone yet. But while you're here, please take a look at the &nbsp; <a href="https://x.com/UTfunkmode">official UNDERTALE: Funk-Mode official Twitter account</a> &nbsp; as it's yet another good place to stay up to date on Funk-Mode news! &nbsp; </p> 
-        </div>
+    <!-- ========== TEXTBOXES ========== -->
+    <div class="textbox">
+        <img class="character-icon" src="https://ik.imagekit.io/edq6pdk5b/image.png?updatedAt=1740085080880" alt="Gfriend-Icon">
+        <p>Hi there! Welcome to the official UNDERTALE: Funk-Mode website!</p>
+    </div>
 
-        <div class="textbox">
-            <img class="character-icon" src="https://ik.imagekit.io/edq6pdk5b/gfrien4.png" alt="Gfriend-Icon-Worry">
-            <p>Huh? What's that? What do you mean the website is unfinished?</p>
-        </div>
+    <div class="textbox">
+        <img class="character-icon" src="https://ik.imagekit.io/edq6pdk5b/gfriend3.png" alt="Gfriend-Icon-Curious">
+        <p>
+            I don't know how you got access to this site, as we haven't given the link out to anyone yet. 
+            But while you're here, please take a look at the &nbsp; 
+            <a href="https://x.com/UTfunkmode" target="_blank">official UNDERTALE: Funk-Mode Twitter account</a> 
+            &nbsp; as it's yet another good place to stay up to date on Funk-Mode news!
+        </p>
+    </div>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                document.querySelectorAll(".textbox p").forEach(p => {
-                    let wrapper = document.createElement("div");
-                    wrapper.className = "undertale-box";
-                    p.parentNode.insertBefore(wrapper, p);
-                    wrapper.appendChild(p);
-                });
-            });
-        </script>
+    <div class="textbox">
+        <img class="character-icon" src="https://ik.imagekit.io/edq6pdk5b/gfrien4.png" alt="Gfriend-Icon-Worry">
+        <p>Huh? What's that? What do you mean the website is unfinished?</p>
+    </div>
 
-    </body>
-</main>
+</body>
+</html>
