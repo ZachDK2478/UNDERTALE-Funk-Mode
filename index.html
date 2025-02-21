@@ -62,9 +62,9 @@
         .textbox {
             position: relative;
             display: flex;
-            align-items: center; /* Align text and icon properly */
-            justify-content: center; /* Centers horizontally */
-            flex-direction: column; /* Stacks content vertically */
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             
             background-color: black;
             color: white;
@@ -82,8 +82,11 @@
             height: auto; /* Adjusts vertically */
             max-height: 90vh; /* Prevents excessive height */
             
-            text-align: center; /* Centers text */
-            margin: 20px auto; /* Centers it on the page */
+            text-align: center;
+            margin: 20px auto;
+            
+            overflow: hidden; /* Prevents content from overflowing */
+            word-wrap: break-word; /* Ensures text stays inside */
         }
 
         /* Style for character icons */
