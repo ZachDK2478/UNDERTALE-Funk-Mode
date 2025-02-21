@@ -1,3 +1,4 @@
+console.log("JavaScript file loaded successfully!");
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".textbox p").forEach(p => {
         let originalHTML = p.innerHTML; // Save original HTML (including links)
