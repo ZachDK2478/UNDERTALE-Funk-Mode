@@ -47,22 +47,6 @@
             font-size: 30px;
         }
 
-        /* Background style code. */
-        #soulBG {
-            position: fixed;
-            width: 200%;
-            height: 200%;
-            display: flex;
-            background-attachment: fixed;
-            background-position: center;
-            background-image: url("..images/bg/test-soulslidingbg.png");
-            filter: opacity(0.1);
-            transform: translate(-32px, -32px);
-            animation: scroll 15s linear infinite forwards;
-            z-index: -9999;
-        }
-
-
         body {
 
             background-image: url("images/bg/test-funkmodebg.png");
@@ -74,222 +58,33 @@
             background-size: cover;
         }
 
-        @keyframes scroll {
-            0% {
-                transform: translate(-0px, -0px);
-            }
-
-            100% {
-                transform: translate(-64px, -128px);
-            }
-        }
-
-        #thebigBox images {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        #logo {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            height: 35vw;
-        }
-
-        .wrap {}
-
-        .box {
+        .textbox {
+            position: relative;
+            display: inline-block;
             background-color: black;
             color: white;
+            border: 4px solid white;
             padding: 10px;
-            border: 5px solid hsl(0, 0%, 100%);
-            outline: 5px solid hsl(0, 0%, 0%);
-            margin-bottom: 15px;
+            font-family: 'Determination Mono', 'Courier New', monospace;
+            font-size: 16px;
+            line-height: 1.5;
+            text-transform: uppercase;
+            box-shadow: 4px 4px white;
+            max-width: 80%;
         }
 
-        ul {
-            list-style-type: none;
+        .textbox::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            bottom: -6px;
+            left: 10px;
+            clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
         }
 
-        @media (orientation: landscape) and (min-width: 900px) {
 
-            /* pc and tablet */
-            body {
-                overflow: hidden;
-            }
-
-
-            #logo {
-                height: 20vw;
-                margin-left: 5%;
-                top: 50%;
-                transform: translateY(50%);
-            }
-
-            .box {
-                width: 15vw;
-                font-size: 1.1rem;
-
-                &:hover {
-                    * {
-                        color: yellow;
-                    }
-                }
-
-            }
-
-            #thebigBox {
-                width: 30vw;
-                margin-left: 20%;
-                margin-top: -50%;
-            }
-
-            .wrap {
-
-                display: inline-flex;
-                margin-left: 40%;
-
-            }
-
-            #LINKS {
-                position: absolute;
-                left: 75%;
-                width: 20%;
-                background-color: black;
-                top: 0px;
-                justify-content: center;
-
-                li {
-                    display: flex;
-                    transform: translate(-20px, 10px);
-                    outline: #ffffff solid 5px;
-                    margin-bottom: 20px;
-
-                    p {
-                        margin-left: 10px;
-                        font-size: 1.5vw;
-                        color: white;
-
-                    }
-
-                    img {
-                        max-width: 200px;
-                    }
-
-                }
-
-                li:hover {
-                    background-color: rgb(23, 23, 23);
-
-                    p {
-                        color: yellow;
-                    }
-                }
-
-                img {
-                    width: 20%;
-                    height: auto;
-                    object-fit: contain;
-                    margin-left: 20px;
-                    top: 50%;
-                }
-            }
-        }
-
-        @media (orientation: portrait) or (max-width: 900px) {
-
-            /* phones and shit */
-            body {
-                overflow-x: hidden;
-                text-align: center;
-            }
-
-            .KILL {
-                display: none;
-            }
-
-            .box {
-                margin-top: 30%;
-                margin-bottom: -20%;
-                text-align: center;
-
-
-                &.button {
-                    max-width: 30vw;
-                }
-            }
-
-            ul {
-                position: relative;
-                text-align: center;
-                width: 100%;
-                padding-left: 0;
-
-            }
-
-
-
-            #thebigBox {
-                margin-bottom: 0px;
-            }
-
-            #ctnButtons {
-                margin: auto;
-                display: flex;
-
-                li {
-                    /*  opacity: 0.5; */
-                    width: 40vw;
-
-                    margin: auto;
-                    margin-top: 15vw;
-                    margin-bottom: 20px;
-                }
-
-                li:hover {
-                    p {
-                        color: yellow;
-                    }
-                }
-            }
-
-            #LINKS {
-                margin: auto;
-                position: absolute;
-                display: inline-flex;
-                top: 50vw;
-                justify-content: center;
-                left: 0;
-                margin: auto;
-
-
-                width: 100vw;
-
-                li {
-
-                    p {
-                        display: none;
-                    }
-
-                    img {
-                        width: 10vw;
-
-                        max-width: 200px;
-
-                    }
-                }
-
-
-
-                li:hover {
-                    img {
-                        opacity: 0.5;
-
-                    }
-                }
-            }
-        }
     </style>
 </head>
 
@@ -298,20 +93,16 @@
 <main>
 
     <body>
-        <div id="soulBG">
-
-        </div>
-
-        <img src="images/main/mod-logo.png" id="logo" alt="Undertale: Funk-Mode Logo"
-            title="The official logo for UT:FM!">
-
-        <ul id='LINKS'>
-            <li onclick='window.location.href = "https://x.com/UTfunkmode"; '>
-                <img title="The official UNDERTALE: Funk-Mode Twitter account!"
-                    src="https://img.icons8.com/?size=100&id=60469&format=png&color=000000">
-                <p font-face="DTS"> Official Twitter  </p>
-            </li>
-        </ul>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".textbox p").forEach(p => {
+                let wrapper = document.createElement("div");
+                wrapper.className = "undertale-box";
+                p.parentNode.insertBefore(wrapper, p);
+                wrapper.appendChild(p);
+            });
+        });
+        </script>
 
         <audio autoplay id="myaudio" loop>
             <source src="audio/menu/chillin" type="audio/flac">
@@ -334,8 +125,12 @@
             }
         </script>
 
-        <div class="dts-text">
-            <p>This is a test message. Hooray!</p>
+        <div class="textbox">
+            <p>Hello, this is an Undertale-style text box!</p>
+        </div>
+
+        <div class="textbox">
+            <p>Another message appears!</p>
         </div>
     </body>
 </main>
