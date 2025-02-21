@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 p.innerHTML = tempDiv.innerHTML; // Apply updated content
 
                 i++;
-                setTimeout(typeWriter, 30); // Adjust speed here
+                setTimeout(typeWriter, 20); // Adjust speed here
             }
         }
 
