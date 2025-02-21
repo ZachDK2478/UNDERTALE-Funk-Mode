@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let originalHTML = p.innerHTML; // Save original content (including links)
         console.log(`Original HTML: ${originalHTML}`);
 
-        let textContent = p.textContent.trim(); // Extract text only
+        let textContent = p.innerHTML.trim(); // Keep full HTML instead of text-only
         console.log(`Extracted text content: ${textContent}`);
 
         p.innerHTML = ""; // Clear text for animation
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function typeWriter() {
             if (i < textContent.length) {
-                p.innerHTML += textContent.charAt(i); // Type one letter at a time
+                p.innerHTML = textContent.substring(0, i + 1); // Preserve HTML while typing
                 i++;
                 setTimeout(typeWriter, 30); // Adjust speed here
             } else {
