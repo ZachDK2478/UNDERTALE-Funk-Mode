@@ -102,9 +102,6 @@
         Your browser does not support the audio element.
     </audio>
 
-    <!-- Background Audio -->
-    <audio id="select-sound" src="audio/snd_select.mp3" preload="auto"></audio>
-
     <script>
         var audio = document.getElementById("myaudio");
         audio.volume = 0.5;
@@ -143,19 +140,30 @@
         <p>Huh? What's that? What do you mean the website is unfinished?</p>
     </div>
 
-    <!-- Inline Script to play sound on click -->
-    <script>
-        document.getElementById("click-link").addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent immediate navigation
-            let selectSound = document.getElementById("select-sound");
-            selectSound.play(); // Play sound immediately
+    <a href="https://example.com" target="_blank" id="click-link">
+    Click me to open a new tab and play sound!
+</a>
 
-            // Open the link in a new tab after a short delay
+<audio id="select-sound" src="audio/snd_select.mp3" preload="auto"></audio>
+
+<!-- JavaScript should be placed at the end of <body> -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let link = document.getElementById("click-link");
+        let selectSound = document.getElementById("select-sound");
+
+        link.addEventListener("click", function(event) {
+            event.preventDefault(); // Stop default navigation
+            selectSound.play(); // Play sound
+
+            // Open link in a new tab after a short delay
             setTimeout(() => {
-                window.open(this.href, "_blank");
-            }, 300); // 300ms delay for sound to play before opening the link
+                window.open(link.href, "_blank");
+            }, 300);
         });
-    </script>
+    });
+</script>
+
     
 </body>
 </html>
