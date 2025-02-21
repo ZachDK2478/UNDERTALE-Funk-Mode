@@ -111,17 +111,6 @@
 <main>
 
     <body>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                document.querySelectorAll(".textbox p").forEach(p => {
-                    let wrapper = document.createElement("div");
-                    wrapper.className = "undertale-box";
-                    p.parentNode.insertBefore(wrapper, p);
-                    wrapper.appendChild(p);
-                });
-            });
-        </script>
-
         <audio autoplay id="myaudio" loop>
             <source src="audio/menu/chillin" type="audio/flac">
             Your browser does not support the audio element.
@@ -157,6 +146,17 @@
             <img class="character-icon" src="https://ik.imagekit.io/edq6pdk5b/gfrien4.png" alt="Gfriend-Icon-Worry">
             <p>Huh? What's that? What do you mean the website is unfinished?</p>
         </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                document.querySelectorAll(".textbox p").forEach(p => {
+                    let wrapper = document.createElement("div");
+                    wrapper.className = "undertale-box";
+                    p.parentNode.insertBefore(wrapper, p);
+                    wrapper.appendChild(p);
+                });
+            });
+        </script>
 
     </body>
 </main>
