@@ -1,48 +1,30 @@
 console.log("JavaScript file loaded successfully!");
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".textbox p").forEach(p => {
-        let originalHTML = p.innerHTML; // Save full HTML, including links
-        let tempDiv = document.createElement("div");
-        tempDiv.innerHTML = originalHTML;
+    console.log("DOM fully loaded!");
 
-        let charIndex = 0;
-        let textNodes = [];
+    document.querySelectorAll(".textbox p").forEach((p, index) => {
+        console.log(`Processing textbox #${index + 1}`);
 
-        // Extract all text nodes while keeping structure
-        function extractTextNodes(element) {
-            element.childNodes.forEach(node => {
-                if (node.nodeType === Node.TEXT_NODE) {
-                    textNodes.push({ node, text: node.textContent, parent: node.parentNode });
-                } else {
-                    extractTextNodes(node); // Recursively check nested elements
-                }
-            });
-        }
+        let originalHTML = p.innerHTML; // Save original content (including links)
+        console.log(`Original HTML: ${originalHTML}`);
 
-        extractTextNodes(tempDiv);
-        p.innerHTML = ""; // Clear text initially
+        let textContent = p.textContent.trim(); // Extract text only
+        console.log(`Extracted text content: ${textContent}`);
+
+        p.innerHTML = ""; // Clear text for animation
+        let i = 0;
 
         function typeWriter() {
-            if (charIndex < textNodes.length) {
-                let { node, text, parent } = textNodes[charIndex];
-                let span = document.createElement("span");
-
-                function typeText(letterIndex = 0) {
-                    if (letterIndex < text.length) {
-                        span.textContent += text.charAt(letterIndex);
-                        setTimeout(() => typeText(letterIndex + 1), 30); // Adjust typing speed
-                    } else {
-                        parent.replaceChild(span, node); // Restore formatted elements
-                        charIndex++;
-                        typeWriter(); // Move to next node
-                    }
-                }
-
-                typeText(); // Start typing for this text node
+            if (i < textContent.length) {
+                p.innerHTML += textContent.charAt(i); // Type one letter at a time
+                i++;
+                setTimeout(typeWriter, 30); // Adjust speed here
+            } else {
+                console.log(`Finished typing for textbox #${index + 1}`);
             }
         }
 
-        typeWriter(); // Begin animation
+        typeWriter(); // Start typing effect
     });
 });
