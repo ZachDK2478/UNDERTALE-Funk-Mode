@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let selectSound = new Audio("audio/snd_select.mp3");
+    let selectSound = new Audio();
+    selectSound.src = "audio/select-sound.wav";
+    selectSound.load(); // Force preload
+
 
     document.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", function (event) {
