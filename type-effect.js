@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (i < textContent.length) {
                 p.innerHTML = textContent.substring(0, i + 1); // Preserve HTML while typing
                 i++;
-                setTimeout(typeWriter, 10); // Adjust speed here
+                setTimeout(typeWriter, 20); // Adjust speed here
             } else {
                 console.log(`Finished typing for textbox #${index + 1}`);
             }
