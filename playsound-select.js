@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 window.open(link.href, "_blank");
             }, 300); // Allow time for sound to play before opening the new tab
+            selectSound.play();
         });
     });
 });
