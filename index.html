@@ -97,7 +97,7 @@
 
 <body>
 
-    <!-- Background Music (Looping) -->
+        <!-- Background Music (Looping) -->
     <audio id="myaudio" autoplay loop>
         <source src="audio/menu/home-menu-chillmix.mp3" type="audio/mp3">
         Your browser does not support the audio element.
@@ -108,43 +108,7 @@
         <source src="audio/snd_select.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let bgMusic = document.getElementById("myaudio");
-            let selectSound = document.getElementById("select-sound");
-
-            // Ensure background music starts and loops properly
-            bgMusic.volume = 0.5;
-            bgMusic.play().catch(error => console.log("Background music autoplay blocked:", error));
-
-            document.querySelectorAll("a").forEach(link => {
-                link.addEventListener("click", function (event) {
-                    event.preventDefault(); // Prevent immediate navigation
-
-                    // Play select sound without interrupting background music
-                    selectSound.currentTime = 0;
-                    selectSound.play().then(() => {
-                        setTimeout(() => {
-                            window.open(link.href, "_blank");
-                        }, 300);
-                    }).catch(error => {
-                        console.log("Audio playback blocked by browser:", error);
-                        window.open(link.href, "_blank"); // Open the link even if sound is blocked
-                    });
-                });
-            });
-
-            // Ensure music resumes if the user interacts with the page
-            document.addEventListener('click', function () {
-                if (bgMusic.paused) {
-                    bgMusic.play();
-                }
-            });
-        });
-    </script>
-
-
+    
     <!-- ========== TEXTBOXES ========== -->
     <div class="textbox">
         <img class="character-icon" src="https://ik.imagekit.io/edq6pdk5b/image.png?updatedAt=1740085080880"
@@ -171,23 +135,36 @@
     <!-- JavaScript Inside HTML (No External JS File) -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            let link = document.getElementById("click-link");
+            let bgMusic = document.getElementById("myaudio");
             let selectSound = document.getElementById("select-sound");
 
-            link.addEventListener("click", function (event) {
-                event.preventDefault(); // Prevent immediate navigation
+            // Ensure background music starts and loops properly
+            bgMusic.volume = 0.5;
+            bgMusic.play().catch(error => console.log("Background music autoplay blocked:", error));
 
-                // Ensure the sound is ready and play it
-                selectSound.currentTime = 0;
-                selectSound.play().then(() => {
-                    // Open the link in a new tab AFTER the sound starts
-                    setTimeout(() => {
-                        window.open(link.href, "_blank");
-                    }, 300);
-                }).catch(error => {
-                    console.log("Audio playback blocked by browser:", error);
-                    window.open(link.href, "_blank"); // Open the link anyway if sound is blocked
+            // Apply sound effect to ALL links, not just one
+            document.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault(); // Prevent immediate navigation
+
+                    // Play select sound without interrupting background music
+                    selectSound.currentTime = 0;
+                    selectSound.play().then(() => {
+                        setTimeout(() => {
+                            window.open(link.href, "_blank");
+                        }, 300);
+                    }).catch(error => {
+                        console.log("Audio playback blocked by browser:", error);
+                        window.open(link.href, "_blank"); // Open the link even if sound is blocked
+                    });
                 });
+            });
+
+            // Ensure background music resumes if the user interacts with the page
+            document.addEventListener('click', function () {
+                if (bgMusic.paused) {
+                    bgMusic.play();
+                }
             });
         });
     </script>
