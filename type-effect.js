@@ -1,20 +1,19 @@
-alert("JavaScript is working!");
-
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll(".textbox p").forEach(p => {
-        let originalHTML = p.innerHTML; // Save original HTML (including links)
-        let textContent = p.textContent; // Extract only the visible text for typing effect
-        p.innerHTML = ""; // Clear text first
+        let originalHTML = p.innerHTML; // Save the full original HTML (including <a> tags)
+        let textContent = p.textContent; // Get only visible text
         let i = 0;
+        p.innerHTML = ""; // Clear text box
 
         function typeWriter() {
             if (i < textContent.length) {
-                // Find the part of the original HTML up to the current character
-                let currentText = textContent.substring(0, i + 1);
+                // Create a temporary container to rebuild the HTML structure
                 let tempDiv = document.createElement("div");
                 tempDiv.innerHTML = originalHTML;
 
-                // Go through each element inside tempDiv and update its text accordingly
+                let currentText = textContent.substring(0, i + 1);
+
+                // Function to update text inside the temporary structure
                 function updateText(element) {
                     if (element.nodeType === Node.TEXT_NODE) {
                         element.textContent = currentText.substring(0, element.textContent.length);
@@ -26,13 +25,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
 
                 updateText(tempDiv);
-                p.innerHTML = tempDiv.innerHTML;
+                p.innerHTML = tempDiv.innerHTML; // Apply updated content
 
                 i++;
                 setTimeout(typeWriter, 30); // Adjust speed here
             }
         }
 
-        typeWriter(); // Start effect
+        typeWriter(); // Start typing effect
     });
 });
