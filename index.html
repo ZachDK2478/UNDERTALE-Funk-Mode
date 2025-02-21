@@ -18,7 +18,8 @@
     <!-- Next up is the style code to edit the style of various functions in the site! This is very important. -->
 
     <style>
-      
+
+        
     /* Text style settings */
     p {
       font-size: 30px;
@@ -33,7 +34,23 @@
       font-weight: bold;
       font-style: normal;
     }
-      </style>
+
+    /* Background style code. */
+    #funkmodeBG {
+    position:fixed;
+    width: 200%;
+    height: 200%;
+    display: flex;
+    background-attachment: fixed;
+    background-position: center; 
+    background-image: url("..images/bg/funkbg.png");
+    filter: opacity(0.1);
+    transform:  translate(-32px,-32px); 
+    animation: scroll 15s linear infinite forwards;
+    z-index: -9999;
+    }
+        
+    </style>
 </head>
 
 <!-- Now here's the real meat and potatoes of the site, the site's actual content! -->
