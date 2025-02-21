@@ -91,10 +91,10 @@
 
         /* Style for character icons */
         .character-icon {
-            width: 140px; /* Adjust size */
-            height: 116px;
-            margin-bottom: 15px; /* Spacing */
-            image-rendering: pixelated; /* Keeps pixel art style */
+            max-width: 100%;  /* Prevents image from being too large */
+            height: auto;  /* Keeps aspect ratio */
+            object-fit: contain; /* Ensures it stays within its box */
+            image-rendering: pixelated; /* Keeps pixel art look */
         }
 
         /* Style for links inside text box */
