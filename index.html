@@ -6,21 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <meta name="description" content="The official website for UNDERTALE: Funk-Mode.">
     <meta name="keywords" content="UNDERTALE, Funk-Mode, UTFM, FNF, Mod">
-    
+
     <!-- Open Graph (Social Media Embeds) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="UNDERTALE: Funk-Mode Website">
     <meta name="twitter:description" content="The official website of the UNDERTALE: Funk-Mode FNF Mod!">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/ZachDK2478/utfm-newsletter-spring2025/refs/heads/main/image/motivational-car.jpg">
-    
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/ZachDK2478/utfm-newsletter-spring2025/refs/heads/main/image/motivational-car.jpg">
+
     <title>UNDERTALE: Funk-Mode</title>
-    
+
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/ZachDK2478/UNDERTALE-Funk-Mode/refs/heads/main/images/favicon/utfm-perseverance.ico">
-    
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://raw.githubusercontent.com/ZachDK2478/UNDERTALE-Funk-Mode/refs/heads/main/images/favicon/utfm-perseverance.ico">
+
     <!-- Fonts & Stylesheets -->
     <link rel="stylesheet" href="fonts.css">
-    
+
     <!-- Scripts -->
     <script src="type-effect.js" defer></script>
 
@@ -95,41 +97,68 @@
 
 <body>
 
-    <!-- Audio File (Preloaded for Faster Playback) -->
+    <!-- Background Music (Looping) -->
+    <audio id="myaudio" autoplay loop>
+        <source src="audio/menu/home-menu-chillmix.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Select Sound Effect (Plays on Click) -->
     <audio id="select-sound" preload="auto">
         <source src="audio/snd_select.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
     <script>
-        var audio = document.getElementById("myaudio");
-        audio.volume = 0.5;
+        document.addEventListener("DOMContentLoaded", function () {
+            let bgMusic = document.getElementById("myaudio");
+            let selectSound = document.getElementById("select-sound");
 
-        function playDaMusic() {
-            audio.currentTime = 0;
-            audio.play();
-        }
+            // Ensure background music starts and loops properly
+            bgMusic.volume = 0.5;
+            bgMusic.play().catch(error => console.log("Background music autoplay blocked:", error));
 
-        playDaMusic();
-        document.addEventListener('click', musicPlay);
-        function musicPlay() {
-            if (audio.currentTime == 0) playDaMusic();
-            document.removeEventListener('click', musicPlay);
-        }
+            document.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault(); // Prevent immediate navigation
+
+                    // Play select sound without interrupting background music
+                    selectSound.currentTime = 0;
+                    selectSound.play().then(() => {
+                        setTimeout(() => {
+                            window.open(link.href, "_blank");
+                        }, 300);
+                    }).catch(error => {
+                        console.log("Audio playback blocked by browser:", error);
+                        window.open(link.href, "_blank"); // Open the link even if sound is blocked
+                    });
+                });
+            });
+
+            // Ensure music resumes if the user interacts with the page
+            document.addEventListener('click', function () {
+                if (bgMusic.paused) {
+                    bgMusic.play();
+                }
+            });
+        });
     </script>
+
 
     <!-- ========== TEXTBOXES ========== -->
     <div class="textbox">
-        <img class="character-icon" src="https://ik.imagekit.io/edq6pdk5b/image.png?updatedAt=1740085080880" alt="Gfriend-Icon">
+        <img class="character-icon" src="https://ik.imagekit.io/edq6pdk5b/image.png?updatedAt=1740085080880"
+            alt="Gfriend-Icon">
         <p>Hi there! Welcome to the official UNDERTALE: Funk-Mode website!</p>
     </div>
 
     <div class="textbox">
         <img class="character-icon" src="https://ik.imagekit.io/edq6pdk5b/gfriend3.png" alt="Gfriend-Icon-Curious">
         <p>
-            I don't know how you got access to this site, as we haven't given the link out to anyone yet. 
-            But while you're here, please take a look at the &nbsp; 
-            <a href="https://x.com/UTfunkmode" target="_blank" id="click-link">official UNDERTALE: Funk-Mode Twitter account</a> 
+            I don't know how you got access to this site, as we haven't given the link out to anyone yet.
+            But while you're here, please take a look at the &nbsp;
+            <a href="https://x.com/UTfunkmode" target="_blank" id="click-link">official UNDERTALE: Funk-Mode Twitter
+                account</a>
             &nbsp; as it's yet another good place to stay up to date on Funk-Mode news!
         </p>
     </div>
@@ -145,7 +174,7 @@
             let link = document.getElementById("click-link");
             let selectSound = document.getElementById("select-sound");
 
-            link.addEventListener("click", function(event) {
+            link.addEventListener("click", function (event) {
                 event.preventDefault(); // Prevent immediate navigation
 
                 // Ensure the sound is ready and play it
@@ -163,6 +192,7 @@
         });
     </script>
 
-    
+
 </body>
+
 </html>
