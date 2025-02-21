@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let selectSound = new Audio("audio/snd_select.wav");
+    let selectSound = new Audio("audio/select-sound.mp3");
 
     document.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", function (event) {
             event.preventDefault(); // Stop immediate navigation
             selectSound.play();
 
-            // Wait for 300ms (or sound duration) before navigating
+            // Open link in a new tab after a short delay
             setTimeout(() => {
-                window.location.href = link.href;
-            }, 400);
+                window.open(link.href, "_blank"); // Opens in a new tab
+            }, 300);
         });
     });
 });
