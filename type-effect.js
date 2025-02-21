@@ -1,29 +1,31 @@
 console.log("JavaScript file loaded successfully!");
+
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".textbox p").forEach(p => {
-        let originalHTML = p.innerHTML; // Save original HTML (including links)
+        let originalHTML = p.innerHTML; // Save full HTML, including links
         let tempDiv = document.createElement("div");
-        tempDiv.innerHTML = originalHTML; // Store original structure
-        let charIndex = 0;
-        let nodes = [];
+        tempDiv.innerHTML = originalHTML;
 
-        // Extract all text nodes while keeping their structure
-        function extractNodes(element) {
+        let charIndex = 0;
+        let textNodes = [];
+
+        // Extract all text nodes while keeping structure
+        function extractTextNodes(element) {
             element.childNodes.forEach(node => {
                 if (node.nodeType === Node.TEXT_NODE) {
-                    nodes.push({ node, text: node.textContent });
+                    textNodes.push({ node, text: node.textContent, parent: node.parentNode });
                 } else {
-                    extractNodes(node); // Recursively process nested elements
+                    extractTextNodes(node); // Recursively check nested elements
                 }
             });
         }
 
-        extractNodes(tempDiv);
-        p.innerHTML = ""; // Clear text to start effect
+        extractTextNodes(tempDiv);
+        p.innerHTML = ""; // Clear text initially
 
         function typeWriter() {
-            if (charIndex < nodes.length) {
-                let { node, text } = nodes[charIndex];
+            if (charIndex < textNodes.length) {
+                let { node, text, parent } = textNodes[charIndex];
                 let span = document.createElement("span");
 
                 function typeText(letterIndex = 0) {
@@ -31,16 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
                         span.textContent += text.charAt(letterIndex);
                         setTimeout(() => typeText(letterIndex + 1), 30); // Adjust typing speed
                     } else {
-                        node.parentNode.replaceChild(span, node); // Restore node after typing
+                        parent.replaceChild(span, node); // Restore formatted elements
                         charIndex++;
                         typeWriter(); // Move to next node
                     }
                 }
 
-                typeText(); // Start typing this node
+                typeText(); // Start typing for this text node
             }
         }
 
-        typeWriter(); // Start effect
+        typeWriter(); // Begin animation
     });
 });
