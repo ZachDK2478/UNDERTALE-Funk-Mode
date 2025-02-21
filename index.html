@@ -96,9 +96,9 @@
 
 <body>
 
-    <!-- Background Audio -->
-    <audio autoplay id="myaudio" loop>
-        <source src="audio/menu/home-menu-chillmix.mp3" type="audio/mp3">
+    <!-- Audio File (Preloaded for Faster Playback) -->
+    <audio id="select-sound" preload="auto">
+        <source src="audio/snd_select.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
@@ -144,25 +144,29 @@
     Click me to open a new tab and play sound!
 </a>
 
-<audio id="select-sound" src="audio/snd_select.mp3" preload="auto"></audio>
+<!-- JavaScript Inside HTML (No External JS File) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let link = document.getElementById("click-link");
+            let selectSound = document.getElementById("select-sound");
 
-<!-- JavaScript should be placed at the end of <body> -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let link = document.getElementById("click-link");
-        let selectSound = document.getElementById("select-sound");
+            link.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent immediate navigation
 
-        link.addEventListener("click", function(event) {
-            event.preventDefault(); // Stop default navigation
-            selectSound.play(); // Play sound
-
-            // Open link in a new tab after a short delay
-            setTimeout(() => {
-                window.open(link.href, "_blank");
-            }, 300);
+                // Ensure the sound is ready and play it
+                selectSound.currentTime = 0;
+                selectSound.play().then(() => {
+                    // Open the link in a new tab AFTER the sound starts
+                    setTimeout(() => {
+                        window.open(link.href, "_blank");
+                    }, 300);
+                }).catch(error => {
+                    console.log("Audio playback blocked by browser:", error);
+                    window.open(link.href, "_blank"); // Open the link anyway if sound is blocked
+                });
+            });
         });
-    });
-</script>
+    </script>
 
     
 </body>
