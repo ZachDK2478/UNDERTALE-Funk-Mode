@@ -7,13 +7,6 @@
     <meta name="description" content="The official website for UNDERTALE: Funk-Mode.">
     <meta name="keywords" content="UNDERTALE, Funk-Mode, UTFM, FNF, Mod">
 
-    <!-- Open Graph (Social Media Embeds) -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="UNDERTALE: Funk-Mode Website">
-    <meta name="twitter:description" content="The official website of the UNDERTALE: Funk-Mode FNF Mod!">
-    <meta name="twitter:image"
-        content="https://raw.githubusercontent.com/ZachDK2478/utfm-newsletter-spring2025/refs/heads/main/image/motivational-car.jpg">
-
     <title>UNDERTALE: Funk-Mode</title>
 
     <!-- Favicon -->
@@ -22,9 +15,6 @@
 
     <!-- Fonts & Stylesheets -->
     <link rel="stylesheet" href="fonts.css">
-
-    <!-- Scripts -->
-    <script src="type-effect.js" defer></script>
 
     <style>
         /* ========== GLOBAL STYLES ========== */
@@ -125,7 +115,7 @@
                 // Make the select sound available
                 let selectSound = document.getElementById("select-sound");
 
-                // Add click event listener to all links
+                // Add click event listener to all links (without conflicting IDs)
                 document.querySelectorAll("a").forEach(link => {
                     link.addEventListener("click", function (event) {
                         event.preventDefault(); // Prevent immediate navigation
@@ -159,8 +149,7 @@
         <p>
             I don't know how you got access to this site, as we haven't given the link out to anyone yet.
             But while you're here, please take a look at the &nbsp;
-            <a href="https://x.com/UTfunkmode" target="_blank" id="select-sound">official UNDERTALE: Funk-Mode Twitter
-                account</a>
+            <a href="https://x.com/UTfunkmode" target="_blank">official UNDERTALE: Funk-Mode Twitter account</a>
             &nbsp; as it's yet another good place to stay up to date on Funk-Mode news!
         </p>
     </div>
