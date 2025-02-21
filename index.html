@@ -142,34 +142,20 @@
                     event.preventDefault(); // Stop default link behavior
 
                     selectSound.currentTime = 0; // Reset sound
+                    selectSound.play(); // Play sound immediately
 
-                    let playPromise = selectSound.play();
+                    // Open the link in a new tab ONLY after the sound has started
+                    setTimeout(() => {
+                        let newTab = window.open(link.href, "_blank");
 
-                    if (playPromise !== undefined) {
-                        playPromise.then(() => {
-                            console.log("Sound played successfully!");
-
-                            // Force a small delay before opening the link
-                            setTimeout(() => {
-                                let newTab = window.open(link.href, "_blank");
-
-                                // Fallback: If new tab is blocked, alert the user
-                                if (!newTab) {
-                                    alert("Your browser blocked the new tab. Please allow pop-ups for this site.");
-                                }
-                            }, 500); // 500ms ensures the sound starts before opening the link
-                        }).catch(error => {
-                            console.log("Audio playback blocked by browser:", error);
-                            window.open(link.href, "_blank"); // Open the link anyway if sound is blocked
-                        });
-                    } else {
-                        window.open(link.href, "_blank"); // Open the link if playPromise is undefined
-                    }
+                        // If pop-ups are blocked, show a message
+                        if (!newTab) {
+                            alert("Your browser blocked the new tab. Please allow pop-ups for this site.");
+                        }
+                    }, 500); // 500ms delay ensures sound plays before opening the tab
                 });
             });
         });
-
-
     </script>
 
 
