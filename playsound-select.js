@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Open the link in a new tab after a slight delay (300ms)
             setTimeout(() => {
                 window.open(link.href, "_blank");
-            }, 300); // Allow time for sound to play before opening the new tab
+            }, 2000); // Allow time for sound to play before opening the new tab
             selectSound.play();
         });
     });
