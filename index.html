@@ -3,7 +3,7 @@
 
 <head>
     <!-- Sets the title of the page at the top. -->
-    <title>UTFM: Intro to the Newsletters</title>
+    <title>UNDERTALE: Funk-Mode</title>
     <!-- Sets the webpage favicon. -->
     <link rel="shortcut icon" type="image/x-icon"
         href="https://raw.githubusercontent.com/ZachDK2478/UNDERTALE-Funk-Mode/refs/heads/main/images/favicon/utfm-perseverance.ico">
@@ -21,6 +21,7 @@
         content="The official website for UNDERTALE: Funk-Mode, basically linking to each official newsletter, and some other important pages.!">
     <meta name="keywords" content="UNDERTALE, Funk-Mode, UTFM, FNF, Mod">
     <link rel="stylesheet" href="fonts.css">
+    <script src="script.js"></script>
 
     <!-- Next up is the style code to edit the style of various functions in the site! This is very important. -->
 
@@ -37,7 +38,7 @@
         @font-face {
             font-family: 'UndertaleFont';
             src: url('https://raw.githubusercontent.com/ZachDK2478/UNDERTALE-Funk-Mode/main/fonts/DeterminationSansRegular.ttf') format('truetype'),
-            font-weight: normal;
+                font-weight: normal;
             font-style: normal;
         }
 
@@ -57,19 +58,52 @@
             background-size: cover;
         }
 
+        /* Center the text box in the middle of the screen */
         .textbox {
             position: relative;
-            display: inline-block;
+            display: flex;
+            align-items: center; /* Align text and icon properly */
+            justify-content: center; /* Centers horizontally */
+            flex-direction: column; /* Stacks content vertically */
+            
             background-color: black;
             color: white;
             border: 4px solid white;
-            padding: 10px;
+            padding: 15px;
             font-family: 'UndertaleFont', 'Courier New', monospace;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 1.5;
-            max-width: 80%;
+            text-transform: uppercase;
+            
+            max-width: 50%;  /* Restricts width */
+            min-width: 250px;
+            width: auto;  /* Adapts to text length */
+            
+            height: auto; /* Adjusts vertically */
+            max-height: 90vh; /* Prevents excessive height */
+            
+            text-align: center; /* Centers text */
+            margin: 20px auto; /* Centers it on the page */
+            box-shadow: 5px 5px 0px white;
         }
 
+        /* Style for character icons */
+        .character-icon {
+            width: 64px; /* Adjust size */
+            height: 64px;
+            margin-bottom: 10px; /* Spacing */
+            image-rendering: pixelated; /* Keeps pixel art style */
+        }
+
+        /* Style for links inside text box */
+        .textbox a {
+            color: #ffcc00; /* Undertale yellow link */
+            text-decoration: none; /* Removes underline */
+        }
+
+        .textbox a:hover {
+            text-decoration: underline; /* Adds underline on hover */
+        }
     </style>
 </head>
 
@@ -111,11 +145,15 @@
         </script>
 
         <div class="textbox">
-            <p>Hello, this is an Undertale-style text box!</p>
+            <img class="character-icon" src="https://ik.imagekit.io/edq6pdk5b/image.png?updatedAt=1740085080880" alt="Gfriend-Icon">
+            <p>Hi there! Welcome to the official UNDERTALE: Funk-Mode website!</p>
         </div>
 
         <div class="textbox">
-            <p>Another message appears!</p>
+            <img class="character-icon" src="https://ik.imagekit.io/edq6pdk5b/image.png?updatedAt=1740085080880" alt="Gfriend-Icon"
+            <p>This text box is centered, stretches downward, and supports links! <a href="https://example.com">Click
+                    here</a>.</p>
         </div>
+
     </body>
 </main>
