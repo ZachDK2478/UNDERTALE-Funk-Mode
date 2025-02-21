@@ -98,7 +98,7 @@
 <body>
 
     <!-- Background Music (Looping) -->
-    <audio id="myaudio" autoplay loop>
+    <audio id="myaudio" preload="auto" loop>
         <source src="audio/menu/home-menu-chillmix.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
@@ -110,39 +110,40 @@
     </audio>
 
     <script>
-        // Wait for the DOM to be fully loaded
-        document.addEventListener("DOMContentLoaded", function () {
-            let bgMusic = document.getElementById("myaudio");
-            let selectSound = document.getElementById("select-sound");
+        // Wait for user interaction
+        let isUserInteracted = false;
 
-            // Ensure background music starts and loops properly
-            bgMusic.volume = 0.5;
+        document.addEventListener("click", function () {
+            if (!isUserInteracted) {
+                isUserInteracted = true;
 
-            // Background music play triggered by user interaction (click)
-            document.addEventListener("click", function () {
-                if (bgMusic.paused) {
-                    bgMusic.play().catch(error => console.log("Background music autoplay blocked:", error));
-                }
-            });
+                // Start background music and allow sound to play
+                let bgMusic = document.getElementById("myaudio");
+                bgMusic.volume = 0.5;
+                bgMusic.play().catch(error => console.log("Background music autoplay blocked:", error));
 
-            // Apply sound effect to ALL links, not just one
-            document.querySelectorAll("a").forEach(link => {
-                link.addEventListener("click", function (event) {
-                    event.preventDefault(); // Stop default link behavior
+                // Make the select sound available
+                let selectSound = document.getElementById("select-sound");
 
-                    // Play select sound and open link after a small delay
-                    selectSound.currentTime = 0; // Reset sound
-                    selectSound.play().then(() => {
-                        // Open the link in a new tab after 250ms delay
-                        setTimeout(() => {
-                            window.open(link.href, "_blank");
-                        }, 250); // Ensures the sound plays first
-                    }).catch(error => {
-                        console.log("Audio playback blocked by browser:", error);
-                        window.open(link.href, "_blank"); // Open the link anyway if sound is blocked
+                // Add click event listener to all links
+                document.querySelectorAll("a").forEach(link => {
+                    link.addEventListener("click", function (event) {
+                        event.preventDefault(); // Prevent immediate navigation
+
+                        // Reset sound and play
+                        selectSound.currentTime = 0;
+                        selectSound.play().then(() => {
+                            // Open the link in a new tab after 200ms delay
+                            setTimeout(() => {
+                                window.open(link.href, "_blank");
+                            }, 200); // Ensures the sound plays first
+                        }).catch(error => {
+                            console.log("Audio playback blocked by browser:", error);
+                            window.open(link.href, "_blank"); // Open the link even if sound is blocked
+                        });
                     });
                 });
-            });
+            }
         });
     </script>
 
