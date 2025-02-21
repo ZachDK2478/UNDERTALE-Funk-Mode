@@ -21,20 +21,25 @@
     <style>
         /* Text style settings */
         p {
-            font-size: 30px;
             max-width: 850px;
             word-wrap: break-word;
             margin: auto;
             text-align: center;
-            font-family: DTS;
             color: white;
         }
 
-        .dts-text {
+        @font-face {
             font-family: DTS;
             src: url("../UNDERTALE-Funk-Mode/fonts/DeterminationSansRegular.ttf") format('truetype');
             font-weight: bold;
             font-style: normal;
+        }
+
+        .dts-text {
+            font-family: DTS;
+            font-weight: bold;
+            font-style: normal;
+            font-size: 30px;
         }
 
         /* Background style code. */
