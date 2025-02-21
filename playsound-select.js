@@ -3,15 +3,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent immediate navigation
+            event.preventDefault(); // Prevent default navigation
 
-            // Play the sound directly from the click event
+            // Start the sound immediately
             selectSound.play();
 
-            // Use setTimeout to give it time to start playing before navigating
-            selectSound.oncanplaythrough = function () {  // Ensures audio is ready to play
-                window.open(link.href, "_blank");  // Open the link in a new tab
-            };
+            // Open the link in a new tab after a slight delay (300ms)
+            setTimeout(() => {
+                window.open(link.href, "_blank");
+            }, 300); // Allow time for sound to play before opening the new tab
         });
     });
 });
