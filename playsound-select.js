@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Open link in a new tab after a short delay
             setTimeout(() => {
                 window.open(link.href, "_blank");
-            }, 500); // 500ms delay for sound effect
+            }, 1500); // 1500ms delay for sound effect
         });
     });
 });
