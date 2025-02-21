@@ -97,7 +97,7 @@
 
 <body>
 
-        <!-- Background Music (Looping) -->
+    <!-- Background Music (Looping) -->
     <audio id="myaudio" autoplay loop>
         <source src="audio/menu/home-menu-chillmix.mp3" type="audio/mp3">
         Your browser does not support the audio element.
@@ -108,7 +108,7 @@
         <source src="audio/snd_select.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    
+
     <!-- ========== TEXTBOXES ========== -->
     <div class="textbox">
         <img class="character-icon" src="https://ik.imagekit.io/edq6pdk5b/image.png?updatedAt=1740085080880"
@@ -142,21 +142,27 @@
             bgMusic.volume = 0.5;
             bgMusic.play().catch(error => console.log("Background music autoplay blocked:", error));
 
-            // Apply sound effect to ALL links, not just one
+            // Add event listener to all links
             document.querySelectorAll("a").forEach(link => {
                 link.addEventListener("click", function (event) {
                     event.preventDefault(); // Prevent immediate navigation
 
-                    // Play select sound without interrupting background music
+                    // Play select sound and open link after delay
                     selectSound.currentTime = 0;
-                    selectSound.play().then(() => {
-                        setTimeout(() => {
-                            window.open(link.href, "_blank");
-                        }, 300);
-                    }).catch(error => {
-                        console.log("Audio playback blocked by browser:", error);
-                        window.open(link.href, "_blank"); // Open the link even if sound is blocked
-                    });
+                    let playPromise = selectSound.play();
+
+                    if (playPromise !== undefined) {
+                        playPromise.then(() => {
+                            setTimeout(() => {
+                                window.open(link.href, "_blank");
+                            }, 200); // Short delay ensures sound plays first
+                        }).catch(error => {
+                            console.log("Audio playback blocked by browser:", error);
+                            window.open(link.href, "_blank"); // Open the link if sound is blocked
+                        });
+                    } else {
+                        window.open(link.href, "_blank"); // Open the link if playPromise is undefined
+                    }
                 });
             });
 
@@ -167,6 +173,7 @@
                 }
             });
         });
+
     </script>
 
 
