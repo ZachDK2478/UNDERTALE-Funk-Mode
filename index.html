@@ -138,29 +138,23 @@
             let selectSound = document.getElementById("select-sound");
 
             document.querySelectorAll("a").forEach(link => {
-                link.addEventListener("click", function (event) {
+                link.addEventListener("click", async function (event) {
                     event.preventDefault(); // Prevent immediate navigation
 
                     selectSound.currentTime = 0; // Reset sound
-                    let playPromise = selectSound.play(); // Attempt to play sound
 
-                    if (playPromise !== undefined) {
-                        playPromise.then(() => {
-                            console.log("Sound played, opening link in new tab...");
-                            setTimeout(() => {
-                                window.open(link.href, "_blank");
-                            }, 200); // Open link after 200ms delay
-                        }).catch(error => {
-                            console.log("Audio playback blocked:", error);
-                            window.open(link.href, "_blank"); // Open link even if sound is blocked
-                        });
-                    } else {
-                        window.open(link.href, "_blank"); // Fallback if playPromise is undefined
+                    try {
+                        await selectSound.play(); // Wait for sound to start
+                        setTimeout(() => {
+                            window.open(link.href, "_blank"); // Open link after short delay
+                        }, 250); // 250ms delay ensures sound plays first
+                    } catch (error) {
+                        console.log("Audio playback blocked by browser:", error);
+                        window.open(link.href, "_blank"); // Open link even if sound is blocked
                     }
                 });
             });
         });
-
 
     </script>
 
