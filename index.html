@@ -62,9 +62,9 @@
         .textbox {
             position: relative;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
+            align-items: center; /* Align text and icon properly */
+            justify-content: flex-start; /* Make items align from left to right */
+            flex-direction: row; /* Ensures icon is on the left, text on the right */
             
             background-color: black;
             color: white;
@@ -82,7 +82,7 @@
             height: auto; /* Adjusts vertically */
             max-height: 90vh; /* Prevents excessive height */
             
-            text-align: center;
+            text-align: left; /* Aligns text properly */
             margin: 20px auto;
             
             overflow: hidden; /* Prevents content from overflowing */
@@ -96,6 +96,19 @@
             height: 116px;  /* Keeps aspect ratio */
             object-fit: contain; /* Ensures it stays within its box */
             image-rendering: pixelated; /* Keeps pixel art look */
+        }
+
+                /* Character icon stays on the left */
+        .character-icon {
+            width: 140px; /* Adjust size */
+            height: 116px;
+            image-rendering: pixelated; /* Keeps pixel art look */
+            margin-right: 15px; /* Adds space between the icon and text */
+        }
+        
+        /* Ensure text fills remaining space */
+        .textbox p {
+            flex: 1; /* Allows text to take remaining space */
         }
 
         /* Style for links inside text box */
