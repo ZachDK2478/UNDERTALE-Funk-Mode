@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Open link in a new tab after a short delay
             setTimeout(() => {
                 window.open(link.href, "_blank"); // Opens in a new tab
-            }, 300);
+            }, 1000);
         });
     });
 });
