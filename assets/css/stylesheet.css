@@ -77,3 +77,12 @@ p {
   opacity: 0;
   pointer-events: none; /* Disables clicks while loading. */
 }
+
+.main-content {
+  opacity: 0;
+  transition: opacity 2.5s ease;
+}
+
+.main-content.visible {
+  opacity: 1;
+}

@@ -1,14 +1,14 @@
 const intro = document.getElementById('intro');
 const audio = document.getElementById('bgMusic');
-const content = document.getElementById('mainContent');
+const mainContent = document.getElementById('mainContent');
 
 intro.addEventListener('click', () => {
   intro.classList.add('fade-out');
-
   audio.play().catch(e => console.error("Playback failed:", e));
 
-  setTimeout(() => {
+  intro.addEventListener('transitionend', () => {
     intro.style.display = 'none';
-    content.style.display = 'block';
-  }, 2500);
+    mainContent.style.display = 'block';
+    mainContent.classList.add('visible');  // trigger fade-in
+  }, { once: true });
 });
