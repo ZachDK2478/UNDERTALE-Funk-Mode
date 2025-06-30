@@ -1,0 +1,40 @@
+/* Set up PixelOperator Font */
+@font-face {
+  font-family: 'PixelOperator';
+  src: url('../fonts/PixelOperator-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+  font-size: 19.5px; 
+}
+
+body {
+  background-attachment: fixed;
+  background-position: center;
+  background-color: black;
+  background-size: cover;
+  font-family: 'PixelOperator';
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: white;
+  line-height: 1;
+  margin-bottom: 1rem;
+  max-width: 850px;
+  word-wrap: break-word;
+  margin: auto;
+}
+
+.pixel-font {
+  font-family: 'PixelOperator';
+}
