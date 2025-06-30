@@ -37,12 +37,28 @@
 </head>
 
 <body>
+  <!-- Intro Screen so that Music Works -->
+  <div id="intro" class="intro-screen">
+    <h1 class="pixel-font">Welcome to the official UNDERTALE: Funk-Mode website!</h1>
+    <p class="pixel-font">Click anywhere to enter.</p>
+  </div>
 
-    <!-- Audio autoplayer. -->
+  <!-- Background Music -->
+  <audio id="bgMusic">
+    <source src="assets/audio/music/Gettin'%20Nostalgic.mp3" type="audio/mpeg">
+  </audio>
 
-    <audio controls autoplay>
-      <source src="assets/audio/music/Gettin'%20Nostalgic.mp3" type="audio/mpeg">
-    </audio>
+  <!-- Main Content -->
+  <div id="mainContent" style="display: none;">
+
+    <h2 class="pixel-font">Newsletter Archive</h2>
+
+  </div>
+
+  <script src="assets/js/introScreen.js">
+    // Should handle the intro screen and audio playback 'n shit
+  </script>
 
 </body>
+
 
