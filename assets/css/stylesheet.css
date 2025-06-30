@@ -60,7 +60,7 @@ p {
   transition: opacity 1s ease;
   cursor: pointer;
   opacity: 1;
-  transition: opacity 5s ease; /* 3s fade out. */
+  transition: opacity 2.5s ease; /* 2.5s fade out. */
 }
 
 .intro-screen.fade-out {

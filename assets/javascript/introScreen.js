@@ -10,5 +10,5 @@ intro.addEventListener('click', () => {
   setTimeout(() => {
     intro.style.display = 'none';
     content.style.display = 'block';
-  }, 5000);
+  }, 2500);
 });
