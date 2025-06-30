@@ -86,3 +86,7 @@ p {
 .main-content.visible {
   opacity: 1;
 }
+
+img {
+  align-content: start;
+}
