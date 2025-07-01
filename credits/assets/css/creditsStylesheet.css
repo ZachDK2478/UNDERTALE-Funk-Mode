@@ -264,7 +264,7 @@ p {
   font-size: 2rem;
   line-height: 1.2 !important;
   z-index: 1;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .creditGian.glitch::before,
@@ -277,7 +277,7 @@ p {
   height: 100%;
   visibility: hidden;
   pointer-events: none;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .creditGian.glitch:hover::before,
