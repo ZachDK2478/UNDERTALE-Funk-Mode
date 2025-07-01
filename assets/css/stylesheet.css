@@ -95,10 +95,18 @@ p {
 }
 
 .socialSize {
-    width: 100px;
-    height: 82px;
+  width: 100px;
+  height: 82px;
 }
 
 .linkYellow {
-    color: yellow;
+  color: yellow;
+}
+
+.centerTwitterLogoLOL {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
