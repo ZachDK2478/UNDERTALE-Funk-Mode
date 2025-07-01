@@ -274,5 +274,12 @@ p {
 .creditGian.glitch::before,
 .creditGian.glitch::after {
   content: attr(data-text);
-  position: absolute
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;               /* start invisible */
+  clip-path: inset(0 0 0 0);/* no slicing yet */
+  pointer-events: none;     /* let clicks through */
 }
