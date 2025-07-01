@@ -31,7 +31,6 @@ body {
 
   /* Smooth font rendering to avoid some display issues. Useful for accessibility. */
   -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing: grayscale;
   image-rendering: smooth;
 
 }
@@ -338,4 +337,24 @@ p {
   text-shadow: 0 0 6px 3px yellow;
   border-radius: 2px;
   color: lime; 
+}
+
+.creditTextResizer {
+  font-size: 2rem;
+}
+
+.creditTextFloatAnim {
+  animation: float 2.5 ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -50);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
