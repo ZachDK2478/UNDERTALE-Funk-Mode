@@ -331,3 +331,23 @@ p {
   margin-bottom: 1rem;
   white-space: normal;
 }
+
+/* HIGG */
+.creditHIGG {
+  color: white; /* Base Color */
+  text-decoration: none; /* Remove underline by default */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.creditHIGG:hover {
+  color: orange;
+  text-decoration: none; /* Keep it clean on hover */
+  border-radius: 2px;
+}
+
+.creditHIGG:focus {
+  outline: none;
+  text-shadow: 0 0 6px 3px yellow;
+  border-radius: 2px;
+  color: lime; 
+}
