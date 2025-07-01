@@ -132,14 +132,15 @@ p {
 }
 
 /* Custom styling for each individual developer. Unique effects & such. */
+/* ZACHDK */
 .creditZachDK {
   color: white; /* Base Color */
   text-decoration: none; /* Remove underline by default */
-  transition: color 0.3s ease, box-shadow 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .creditZachDK:hover {
-  color: purple;
+  color: white;
   text-decoration: none; /* Keep it clean on hover */
   text-shadow: 0 0 6px 3px purple;
   border-radius: 2px;
@@ -150,4 +151,46 @@ p {
   text-shadow: 0 0 6px 3px yellow;
   border-radius: 2px;
   color: green; /* Optional: change text color on focus */
+}
+
+/* GON */
+.creditGon {
+  color: white; /* Base Color */
+  text-decoration: none; /* Remove underline by default */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.creditGon:hover {
+  color: white;
+  text-decoration: none; /* Keep it clean on hover */
+  text-shadow: 0 0 6px 3px yellow;
+  border-radius: 2px;
+}
+
+.creditGon:focus {
+  outline: none;
+  text-shadow: 0 0 6px 3px yellow;
+  border-radius: 2px;
+  color: lightskyblue; /* Optional: change text color on focus */
+}
+
+/* GLINTFISH */
+.creditGlintfish {
+  color: white; /* Base Color */
+  text-decoration: none; /* Remove underline by default */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.creditGlintfish:hover {
+  color: white;
+  text-decoration: none; /* Keep it clean on hover */
+  text-shadow: 0 0 6px 3px #9ADCD6;
+  border-radius: 2px;
+}
+
+.creditGlintfish:focus {
+  outline: none;
+  text-shadow: 0 0 6px 3px yellow;
+  border-radius: 2px;
+  color: #74433F; /* Optional: change text color on focus */
 }
