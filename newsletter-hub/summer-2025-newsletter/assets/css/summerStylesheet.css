@@ -86,20 +86,6 @@ p {
   word-wrap: break-word;
 }
 
-/* Background Animation */
-#soulBG {
-    position: fixed;
-    width: 200%;
-    height: 200%;
-    display: flex;
-    background-attachment: fixed;
-    background-position: center;
-    background-image: url("../images/anim/test-soulslidingbg.png");
-    filter: opacity(0.1);
-    animation: scroll 10s linear infinite forwards;
-    z-index: -9999;
-}
-
 #logo {
     display: block;
     margin: 10px auto;

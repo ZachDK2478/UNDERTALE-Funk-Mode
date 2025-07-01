@@ -30,12 +30,20 @@
 </head>
 
 <style>   
-    @media (orientation: portrait),
-    (max-width: 900px) {
-        body {
-            overflow-x: hidden;
-            text-align: center;
-        }
+
+
+    /* Background Animation */
+    #soulBG {
+        position: fixed;
+        width: 200%;
+        height: 200%;
+        display: flex;
+        background-attachment: fixed;
+        background-position: center;
+        background-image: url("assets/images/anim/test-soulslidingbg.png");
+        filter: opacity(0.1);
+        animation: scroll 10s linear infinite forwards;
+        z-index: -9999;
     }
     
     @keyframes scroll {
@@ -46,6 +54,15 @@
             transform: translate(-64px, -192px);
         }
     }
+    
+    @media (orientation: portrait),
+    (max-width: 900px) {
+        body {
+            overflow-x: hidden;
+            text-align: center;
+        }
+    }
+    
 </style>
 
 <body>
