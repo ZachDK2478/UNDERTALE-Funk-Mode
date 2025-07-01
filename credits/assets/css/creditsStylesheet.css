@@ -216,7 +216,6 @@ p {
 .glitch {
   position: relative;
   display: inline-block;
-  font-size: 6rem;
   background: #000;
   text-transform: uppercase;
   letter-spacing: 0.1em;
