@@ -43,18 +43,6 @@ html {
   font-size: 18px; /* Base size for desktop */
 }
 
-@media (max-width: 768px) {
-  html {
-    font-size: 16px; /* Slightly smaller on tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  html {
-    font-size: 14px; /* Smaller base size on phones */
-  }
-}
-
 /* Creates padding for smaller screens to avoid the same issue as the Summer 2025 Newsletter. */
 
 @media (max-width: 480px) {
