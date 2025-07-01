@@ -305,5 +305,4 @@ p {
 .glitch::before,
 .glitch::after {
   background: rgba(255, 0, 0, 0.1);
-  opacity: 1;
 }
