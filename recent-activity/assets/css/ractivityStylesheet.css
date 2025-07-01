@@ -55,3 +55,7 @@ p {
     margin-right: auto;
     width: 50%;
 }
+
+.linkYellow {
+    color: yellow;
+}
