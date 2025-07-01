@@ -217,8 +217,6 @@ p {
   position: relative;
   display: inline-block;
   background: #000;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
 }
 
 /* Hide pseudo-elements until hover */
