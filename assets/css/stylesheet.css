@@ -93,3 +93,12 @@ p {
   margin-right: auto;
   width: 50%;
 }
+
+.socialSize {
+    width: 100px;
+    height: 82px;
+}
+
+.linkYellow {
+    color: yellow;
+}
