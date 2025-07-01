@@ -16,34 +16,6 @@
         }
         /* FONTS */
         
-        @font-face {
-            font-family: DTS;
-            src: url("assets/fonts/determination.ttf") format('truetype');
-            font-weight: bold;
-            font-style: normal;
-        }
-        
-        @font-face {
-            font-family: Sans;
-            src: url("assets/fonts/sansfont.ttf") format('truetype');
-            font-weight: bold;
-            font-style: normal;
-        }
-        
-        @font-face {
-            font-family: Crypt;
-            src: url("assets/fonts/crypt.ttf") format('truetype');
-            font-weight: bold;
-            font-style: normal;
-        }
-        
-        @font-face {
-            font-family: Papyru;
-            src: url("assets/fonts/papyfont.ttf") format('truetype');
-            font-weight: bold;
-            font-style: normal;
-        }
-        
         .dts-text {
             font-family: DTS;
             font-weight: bold;
@@ -98,15 +70,6 @@
             z-index: -9999;
         }
         
-        @keyframes scroll {
-            0% {
-                transform: translate(0, -64px);
-            }
-            100% {
-                transform: translate(-64px, -192px);
-            }
-        }
-        
         #logo {
             display: block;
             margin: 10px auto;
@@ -131,12 +94,4 @@
             object-fit: contain;
             display: block;
             margin: 15px auto;
-        }
-        
-        @media (orientation: portrait),
-        (max-width: 900px) {
-            body {
-                overflow-x: hidden;
-                text-align: center;
-            }
         }
