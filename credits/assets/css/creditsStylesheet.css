@@ -216,7 +216,12 @@ p {
 .glitch {
   position: relative;
   display: inline-block;
-  background: #000;
+  background: none;
+}
+
+.creditGian.glitch {
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 /* Hide pseudo-elements until hover */
