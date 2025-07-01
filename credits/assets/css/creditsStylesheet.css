@@ -344,8 +344,6 @@ p {
 }
 
 .creditTextFloatAnim {
-  width: 100px;
-  height: 100px;
   border-radius: 50%;
   position: relative;
   animation: float 3s ease-in-out infinite;
