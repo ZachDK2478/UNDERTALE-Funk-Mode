@@ -331,17 +331,3 @@ p {
   margin-bottom: 1rem;
   white-space: normal;
 }
-
-@media (max-width: 480px) {
-  .creditTitleBugfixGian {
-    white-space: normal;
-    word-break: break-word;
-  }
-}
-
-@media (max-width: 768px) {
-  .creditTitleBugfixGian {
-    white-space: normal;
-    word-break: break-word;
-  }
-}
