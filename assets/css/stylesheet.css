@@ -139,7 +139,14 @@ p {
 
 .trailerEmbed {
   width: 100%; /* Scales width with screen */
-  max-width: 400px; /* Sets max width */
+  max-width: 600px; /* Sets max width */
   aspect-ratio: 16 / 9; /* Removes the need to manually set height */
   border: none;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
 }
