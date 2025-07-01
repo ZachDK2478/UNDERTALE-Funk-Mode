@@ -17,8 +17,9 @@ body {
   text-align: center;
   background-attachment: fixed;
   background-position: center;
-  background-color: #00000000;
+  background-color: none;
   background-size: cover;
+  color: white;
   font-family: 'PixelOperator';
   margin: 0;
   padding: 0;
