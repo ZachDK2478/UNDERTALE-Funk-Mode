@@ -64,7 +64,7 @@
             display: flex;
             background-attachment: fixed;
             background-position: center;
-            background-image: url("assets/images/anim/test-soulslidingbg.png");
+            background-image: url("../images/anim/test-soulslidingbg.png");
             filter: opacity(0.1);
             animation: scroll 10s linear infinite forwards;
             z-index: -9999;
