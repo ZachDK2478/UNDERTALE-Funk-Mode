@@ -94,7 +94,7 @@ p {
   width: 50%;
 }
 
-.socialSize {
+.socialSizeTwitter {
   width: 100px;
   height: 82px;
 }
@@ -109,4 +109,9 @@ p {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.socialSizeDisc {
+  width: 150;
+  height: 150px;
 }
