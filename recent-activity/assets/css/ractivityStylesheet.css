@@ -29,7 +29,6 @@ h1 {
 h2 {
     color: white;
     margin-bottom: 1rem;
-    text-align: center;
 }
 
 p {
@@ -50,6 +49,7 @@ p {
 }
 
 .center {
+    text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
