@@ -141,5 +141,5 @@ p {
   width: 100%; /* Scales width with screen */
   max-width: 400px; /* Sets max width */
   aspect-ratio: 16 / 9; /* Removes the need to manually set height */
-  border: 3px outset;
+  border: none;
 }
