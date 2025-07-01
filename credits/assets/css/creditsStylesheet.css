@@ -354,7 +354,7 @@ p {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20);
+    transform: translateY(-45px);
   }
   100% {
     transform: translateY(0);
