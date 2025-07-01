@@ -128,3 +128,18 @@ p {
   padding: 0;
   margin: 0;
 }
+
+.funkModeTrailers {
+  display: flex;
+  justify-content: center; /* Horizontal */
+  gap: 20px; 
+  flex-wrap: wrap; /* Accessibility for stacking on smaller screens */
+  margin: 40px auto;
+}
+
+.trailerEmbed {
+  width: 100%; /* Scales width with screen */
+  max-width: 400px; /* Sets max width */
+  aspect-ratio: 16 / 9; /* Removes the need to manually set height */
+  border: 3px outset;
+}
