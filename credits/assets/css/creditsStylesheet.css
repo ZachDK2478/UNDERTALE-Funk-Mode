@@ -141,13 +141,13 @@ p {
 .creditZachDK:hover {
   color: purple;
   text-decoration: none; /* Keep it clean on hover */
-  box-shadow: 0 0 6px 3px purple;
+  text-shadow: 0 0 6px 3px purple;
   border-radius: 2px;
 }
 
 .creditZachDK:focus {
   outline: none;
-  box-shadow: 0 0 6px 3px yellow;
+  text-shadow: 0 0 6px 3px yellow;
   border-radius: 2px;
   color: green; /* Optional: change text color on focus */
 }
