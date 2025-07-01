@@ -236,7 +236,6 @@ p {
   width: 100%; height: 100%;
   opacity: 0;
   clip-path: inset(0 0 0 0);
-  z-index: 9999;
 }
 
 .glitch:hover::before,
@@ -245,8 +244,6 @@ p {
   left: 2px;                          /* red channel offset */
   text-shadow: -2px 0 red;
   animation: glitch-anim-1 1s infinite linear alternate-reverse;
-  z-index: 9999;
-
 }
 
 .glitch:hover::after,
@@ -291,4 +288,22 @@ p {
   opacity: 0;               /* start invisible */
   clip-path: inset(0 0 0 0);/* no slicing yet */
   pointer-events: none;     /* let clicks through */
+}
+
+.glitch::before {
+  z-index: 2;
+}
+.glitch::after {
+  z-index: 3;
+}
+
+.glitch::before,
+.glitch::after {
+  mix-blend-mode: screen;
+}
+
+.glitch::before,
+.glitch::after {
+  background: rgba(255, 0, 0, 0.1);
+  opacity: 1;
 }
