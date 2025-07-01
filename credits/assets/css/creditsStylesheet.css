@@ -140,9 +140,8 @@ p {
 }
 
 .creditZachDK:hover {
-  color: white;
+  color: purple;
   text-decoration: none; /* Keep it clean on hover */
-  text-shadow: 0 0 6px 3px purple;
   border-radius: 2px;
 }
 
@@ -154,20 +153,19 @@ p {
 }
 
 /* GON */
-.creditGon {
+.creditGontheGhost {
   color: white; /* Base Color */
   text-decoration: none; /* Remove underline by default */
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.creditGon:hover {
+.creditGontheGhost:hover {
   color: white;
   text-decoration: none; /* Keep it clean on hover */
-  text-shadow: 0 0 6px 3px yellow;
   border-radius: 2px;
 }
 
-.creditGon:focus {
+.creditGontheGhost:focus {
   outline: none;
   text-shadow: 0 0 6px 3px yellow;
   border-radius: 2px;
@@ -182,9 +180,8 @@ p {
 }
 
 .creditGlintfish:hover {
-  color: white;
+  color: #9ADCD6;
   text-decoration: none; /* Keep it clean on hover */
-  text-shadow: 0 0 6px 3px #9ADCD6;
   border-radius: 2px;
 }
 
