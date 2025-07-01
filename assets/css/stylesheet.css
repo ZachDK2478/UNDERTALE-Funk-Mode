@@ -116,7 +116,7 @@ p  {
   position: relative;
   display: inline-block;
   font-size: 1rem;   /* restore from zero */
-  line-height: 1.2;  /* restore from zero */
+  line-height: 1.2 !important; /* restore from zero */
 }
 
 /* Pseudo-elements for glitch text */
