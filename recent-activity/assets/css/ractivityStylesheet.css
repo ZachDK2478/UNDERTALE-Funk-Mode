@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'PixelOperator';
+    src: url('../fonts/PixelOperator-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html {
+    font-size: 19.5px;
+}
+
+body {
+    background-attachment: fixed;
+    background-position: center;
+    background-color: black;
+    background-size: cover;
+    color: white;
+    font-family: 'PixelOperator';
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+p {
+    color: white;
+    line-height: 1;
+    margin-bottom: 1rem;
+    max-width: 850px;
+    word-wrap: break-word;
+    margin: auto;
+    margin: 0 auto 1rem auto;
+    /* top 0, horizontal auto (center), bottom 1rem */
+    max-width: 850px;
+    line-height: 1.2;
+}
+
+.pixel-font {
+    font-family: 'PixelOperator';
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
