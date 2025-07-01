@@ -115,3 +115,8 @@ p {
   width: 100px;
   height: 100px;
 }
+
+.socialSizeDisc, .socialSizeTwitter {
+  display: inline-block;
+  vertical-align: middle;
+}
