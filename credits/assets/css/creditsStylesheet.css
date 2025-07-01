@@ -222,6 +222,9 @@ p {
 .creditGian.glitch {
   font-size: 1rem;
   line-height: 1.2;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
 }
 
 /* Hide pseudo-elements until hover */
