@@ -1,4 +1,11 @@
-/* DEFINE SCALE-3!!!! */
+/* 
+
+    Ignore the unknown property: 'text-stroke' error. VSC does that here because it's an upcoming standard
+    but VSC doesn't have too much support for it yet. Just leave it in, or take it away if you want. I don't care lol
+    
+*/
+
+/* ---------- Define Space ---------- */
 :root {
   --space-1: 0.5rem;
   --space-2: 1rem;
@@ -132,6 +139,10 @@ body{
 
 /* ---------- Newsletter Text Handling ---------- */
 .outlined {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
     color: yellow;
     -webkit-text-stroke: 5px rgb(0, 0, 0);
     paint-order: stroke fill;
@@ -146,7 +157,6 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    max-width: 60ch;
+    padding-top: 0;
+    padding-bottom: 2rem;
 }
