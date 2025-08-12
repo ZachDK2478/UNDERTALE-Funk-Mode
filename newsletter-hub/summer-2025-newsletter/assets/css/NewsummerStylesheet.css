@@ -5,9 +5,10 @@
 }
 
 
+/* ---------- Cursor ---------- */
 /* Edit later */
 *{
-    font-family: 'Undertale';
+    font-family: 'undertail';
     cursor: url("images/mouse/fmCurs_heart.png"), auto;
     
 }
@@ -17,9 +18,8 @@ body{
     margin: 0px;
 }
 
-.button{
-    cursor:   url("images/mouse/fmCurs_heart_Hover.png"),
-    pointer;
+.button {
+    cursor: url("images/mouse/fmCurs_heart_Hover.png"), pointer;
 }
 
 
