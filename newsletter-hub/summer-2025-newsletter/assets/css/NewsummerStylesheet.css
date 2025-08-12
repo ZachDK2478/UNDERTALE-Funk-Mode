@@ -129,3 +129,15 @@ body{
   padding-top: 0; /* kill top padding */
   padding-bottom: var(--space-2);
 }
+
+/* ---------- Newsletter Text Handling ---------- */
+.outlined {
+    color: yellow;
+    -webkit-text-stroke: 5px rgb(0, 0, 0);
+    paint-order: stroke fill;
+    text-stroke: 5px rgb(0, 0, 0);
+}
+
+p {
+    color: white;
+}
