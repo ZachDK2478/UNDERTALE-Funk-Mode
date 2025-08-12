@@ -1,0 +1,104 @@
+/* ---------- Fonts ---------- */
+@font-face {
+    font-family: 'undertail';
+    src: url('./font/UT.ttf');
+}
+
+
+/* Edit later */
+*{
+    font-family: 'Undertale';
+    cursor: url("images/mouse/fmCurs_heart.png"), auto;
+    
+}
+
+body{
+    cursor: url("images/mouse/fmCurs_heart.png"), auto;
+    margin: 0px;
+}
+
+.button{
+    cursor:   url("images/mouse/fmCurs_heart_Hover.png"),
+    pointer;
+}
+
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: var(--max-content);
+  margin-inline: auto;
+  padding: var(--space-3);
+}
+
+.header {
+  text-align: center;
+  padding-block: var(--space-3);
+}
+
+.logo {
+  display: block;
+  margin-inline: auto;
+  height: auto;
+  max-width: clamp(160px, 35vw, 520px);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+/* ---------- Accessibility ---------- */
+@media (orientation: landscape) and (min-width: 900px){ /* pc and tablet */
+    body{
+        overflow: hidden;
+    }
+
+    #logo  {
+        height: 20vw;
+        margin-left:5%;
+        top: 50%;
+transform: translateY(50%);
+    
+    }
+}
+
+/* ---------- Links ---------- */
+   #LINKS {
+    position: absolute;
+    left: 75%;
+    width: 20%;
+    background-color: black;
+    top: 0px;
+    justify-content: center;
+    
+    li {
+        display: flex;
+        transform: translate(-20px, 10px);
+        outline: #ffffff solid 5px;
+      margin-bottom: 20px;
+        p {
+            margin-left: 10px ;
+            font-size: 1.5vw;
+            color: white;
+            
+        }
+      img{
+        max-width: 200px;
+      }
+        
+    }
+    li:hover{
+        background-color: rgb(23, 23, 23);
+        p{
+            color: yellow;
+        }
+    }
+    img{
+    width: 20%;
+    height: auto;
+    object-fit: contain;
+    margin-left: 20px;
+    top: 50%;
+   }
+}
