@@ -117,3 +117,11 @@ body{
   align-items: center;
   padding-block: var(--space-3);
 }
+
+.beachgoers-image {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  transform: scale(0.5);
+  transform-origin: center;
+}
