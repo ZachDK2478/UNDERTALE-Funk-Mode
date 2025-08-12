@@ -9,17 +9,17 @@
 /* Edit later */
 *{
     font-family: 'undertail';
-    cursor: url("images/mouse/fmCurs_heart.png"), auto;
+    cursor: url("../images/mouse/fmCurs_heart.png"), auto;
     
 }
 
 body{
-    cursor: url("images/mouse/fmCurs_heart.png"), auto;
+    cursor: url("../images/mouse/fmCurs_heart.png"), auto;
     margin: 0px;
 }
 
 .button {
-    cursor: url("images/mouse/fmCurs_heart_Hover.png"), pointer;
+    cursor: url("../images/mouse/fmCurs_heart_Hover.png"), pointer;
 }
 
 
