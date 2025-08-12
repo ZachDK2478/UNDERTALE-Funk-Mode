@@ -33,16 +33,18 @@
 
     /* Background Animation */
     #soulBG {
-        position: fixed;
-        width: 200%;
-        height: 200%;
-        display: flex;
-        background-attachment: fixed;
-        background-position: center;
-        background-image: url("assets/images/anim/test-soulslidingbg.png");
-        filter: opacity(0.1);
-        animation: scroll 10s linear infinite forwards;
-        z-index: -9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-image: url("assets/images/anim/test-soulslidingbg.png");
+    background-size: cover;
+    background-position: center;
+    animation: scroll 10s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+    filter: opacity(0.1);
     }
     
     @keyframes scroll {
@@ -535,7 +537,7 @@
             </div>
         </div>
     </div>
-    
+
 </body>
 
 </html>

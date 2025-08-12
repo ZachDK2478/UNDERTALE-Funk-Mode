@@ -11,28 +11,28 @@
 }
 
 body {
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  background-attachment: fixed;
-  background-position: center;
-  background-color: black;
-  background-size: cover;
-  color: white;
-  font-family: 'PixelOperator';
   margin: 0;
   padding: 0;
-  
+  background-color: black;
+  color: white;
+  font-family: 'PixelOperator';
+  overflow: hidden;
+
+  /* Smooth font rendering to avoid some display issues. Useful for accessibility. */
+
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  image-rendering: smooth;
+
+}
+
+#mainContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  /* Smooth font rendering to avoid some display issues. Useful for accessibility. */
-  -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing: grayscale;
-  image-rendering: smooth;
+  min-height: 100vh;
+  text-align: center;
 }
 
 /* RESPONSIVENESS */
