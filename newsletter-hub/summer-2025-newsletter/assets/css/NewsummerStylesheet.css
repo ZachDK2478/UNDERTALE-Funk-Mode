@@ -1,3 +1,12 @@
+/* DEFINE SCALE-3!!!! */
+:root {
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+}
+
 /* ---------- Fonts ---------- */
 @font-face {
     font-family: 'undertail';
