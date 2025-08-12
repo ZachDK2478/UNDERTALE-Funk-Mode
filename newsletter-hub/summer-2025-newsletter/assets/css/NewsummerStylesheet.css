@@ -91,7 +91,7 @@ transform: translateY(50%);
 
   li:hover {
     img {
-      filter: brightness(1.2);
+      filter: brightness(1.5);
     }
   }
 
