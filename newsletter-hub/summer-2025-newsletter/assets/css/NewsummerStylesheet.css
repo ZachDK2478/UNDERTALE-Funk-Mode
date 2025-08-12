@@ -190,7 +190,7 @@ p {
 }
 
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 @media (max-width: 600px) {
@@ -200,4 +200,27 @@ body {
     .outlined {
         font-size: 21px;
     }
+}
+
+/* ---------- Section Separators ---------- */
+
+.froggif { /* GIF of Froggit */
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* ---------- Song Teaser Images ---------- */
+
+/* Soulcore */
+.gfriend-odd { 
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
