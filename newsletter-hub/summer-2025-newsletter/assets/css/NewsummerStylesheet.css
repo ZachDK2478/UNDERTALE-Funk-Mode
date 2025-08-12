@@ -60,11 +60,13 @@ body{
 }
 
 .logo {
+  width: 100%;
+  max-width: clamp(160px, 90vw, 520px);
+  height: auto;
   display: block;
   margin-inline: auto;
-  height: auto;
-  max-width: clamp(160px, 35vw, 520px);
 }
+
 
 .layout {
   display: grid;
@@ -137,6 +139,12 @@ body{
   padding-bottom: var(--space-2);
 }
 
+.beachgoers-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ---------- Newsletter Text Handling ---------- */
 .outlined {
     display: flex;
@@ -161,4 +169,13 @@ p {
     padding-bottom: 2rem;
     text-align: center;
     font-size: 21px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
 }
