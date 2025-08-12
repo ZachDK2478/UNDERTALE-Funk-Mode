@@ -192,3 +192,12 @@ p {
 body {
   overflow-x: hidden;
 }
+
+@media (max-width: 600px) {
+    .paragraph {
+        font-size: 16px;
+    }
+    .outlined {
+        font-size: 21px;
+    }
+}
