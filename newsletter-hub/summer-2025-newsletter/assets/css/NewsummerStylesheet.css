@@ -57,18 +57,19 @@ body{
 }
 
 /* ---------- Accessibility ---------- */
-@media (orientation: landscape) and (min-width: 900px){ /* pc and tablet */
-    body{
-        overflow: hidden;
-    }
+@media (orientation: landscape) and (min-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
 
-    #logo  {
-        height: 20vw;
-        margin-left:5%;
-        top: 50%;
-transform: translateY(50%);
-    
-    }
+  #logo {
+    height: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    transform: none;
+  }
 }
 
 /* ---------- Links ---------- */
@@ -98,4 +99,12 @@ transform: translateY(50%);
 
 #LINKS li:hover img {
   filter: brightness(1.3);
+}
+
+/* ---------- Custom Wrappers ---------- */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: var(--space-3);
 }
