@@ -36,8 +36,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 200%;
-    height: 200%;
+    width: 100vw;
+    height: 100vh;
     background-image: url("assets/images/anim/test-soulslidingbg.png");
     background-size: cover;
     background-position: center;
@@ -48,12 +48,12 @@
     }
     
     @keyframes scroll {
-        0% {
-            transform: translate(0, -64px);
-        }
-        100% {
-            transform: translate(-64px, -192px);
-        }
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-64px, -192px);
+    }
     }
     
     @media (orientation: portrait),

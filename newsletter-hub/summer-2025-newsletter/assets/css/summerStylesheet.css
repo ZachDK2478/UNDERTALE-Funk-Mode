@@ -16,23 +16,20 @@ body {
   background-color: black;
   color: white;
   font-family: 'PixelOperator';
-  overflow: hidden;
-
-  /* Smooth font rendering to avoid some display issues. Useful for accessibility. */
-
-  -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing: grayscale;
-  image-rendering: smooth;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  text-align: center;
 }
 
 #mainContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  text-align: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 900px;
+  padding: 2rem;
 }
 
 /* RESPONSIVENESS */
