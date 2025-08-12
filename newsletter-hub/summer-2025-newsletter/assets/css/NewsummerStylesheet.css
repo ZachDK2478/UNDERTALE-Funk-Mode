@@ -121,7 +121,7 @@ body{
 
 .beachgoers-image {
   max-width: 100%;
-  transform: scale(0.5);
+  transform: scale(0.8);
   transform-origin: center;
   display: flex;
   flex-direction: column;
