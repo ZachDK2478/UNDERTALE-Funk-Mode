@@ -22,6 +22,14 @@ body{
     cursor: url("../images/mouse/fmCurs_heart_Hover.png"), pointer;
 }
 
+.link-item img {
+    cursor: url("../images/mouse/fmCurs_heart.png"), auto;
+}
+
+.link-item img:hover {
+    cursor: url("../images/mouse/fmCurs_heart_Hover.png"), pointer;
+}
+
 
 /* ---------- Layout ---------- */
 .container {
