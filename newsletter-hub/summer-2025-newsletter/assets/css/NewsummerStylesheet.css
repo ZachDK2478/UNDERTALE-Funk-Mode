@@ -142,11 +142,11 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-  
     color: yellow;
     -webkit-text-stroke: 6px rgb(64 64 0);
     paint-order: stroke fill;
-    text-stroke: 6px rgb(64 64 0);
+    text-stroke: 6px rgb(0, 0, 0);
+    font-size: 40px;
 }
 
 p {
@@ -160,4 +160,5 @@ p {
     padding-top: 0;
     padding-bottom: 2rem;
     text-align: center;
+    font-size: 21px;
 }
