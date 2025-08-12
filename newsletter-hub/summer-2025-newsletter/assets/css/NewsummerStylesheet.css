@@ -80,14 +80,22 @@ body{
     overflow-x: hidden;
   }
 
-  #logo {
-    height: 20vw;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    position: relative;
-    transform: none;
-  }
+    #logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 90vw;
+        height: auto;
+    }
+
+    #beachgoers {
+        display: block;
+        width: 100%;
+        max-width: 90vw;
+        height: auto;
+        margin-inline: auto;
+    }   
 }
 
 /* ---------- Links ---------- */
@@ -145,6 +153,13 @@ body{
   display: block;
 }
 
+@media (max-width: 600px) {
+  .beachgoers-image {
+    transform: none;
+    padding-inline: var(--space-2);
+  }
+}
+
 /* ---------- Newsletter Text Handling ---------- */
 .outlined {
     display: flex;
@@ -173,9 +188,4 @@ p {
 
 body {
   overflow-x: hidden;
-}
-
-.container {
-  width: 100%;
-  box-sizing: border-box;
 }
