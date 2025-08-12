@@ -80,28 +80,26 @@ transform: translateY(50%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-  li {
-    display: flex;
-    transform: translate(-20px, 10px);
-    margin-bottom: 20px;
+#LINKS li {
+  display: inline-block;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
 
-    img {
-      max-width: 200px;
-    }
-  }
+#LINKS li img {
+  display: block;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin: 0;
+  transition: filter 0.3s ease;
+}
 
-  li:hover {
-    img {
-      filter: brightness(1.5);
-    }
-  }
-
-  img {
-    width: 20%;
-    height: auto;
-    object-fit: contain;
-    margin-left: 20px;
-    top: 50%;
-  }
+#LINKS li:hover img {
+  filter: brightness(1.5);
 }
