@@ -285,6 +285,16 @@ body {
     padding-bottom: 4rem;
 }
 
+/* Perseverance */
+#gameover-teaser {
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
 /* ---------- Song Teaser Audio Styles ---------- */
 
 #audio {
