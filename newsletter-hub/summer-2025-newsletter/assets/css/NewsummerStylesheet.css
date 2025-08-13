@@ -114,6 +114,14 @@ body{
         height: auto;
         margin-inline: auto;
     }
+
+    #concentrate-glint {
+      display: block;
+      width: 100%;
+      max-width: 90vw;
+      height: auto;
+      margin-inline: auto;
+    }
 }
 
 /* ---------- Links ---------- */
