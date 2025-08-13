@@ -99,23 +99,7 @@ body{
 }
 
 @media (max-width: 600px) {
-    #gameover-teaser {
-        display: block;
-        width: 100%;
-        max-width: 90vw;
-        height: auto;
-        margin-inline: auto;
-    }
-
-    #fuck {
-        display: block;
-        width: 100%;
-        max-width: 90vw;
-        height: auto;
-        margin-inline: auto;
-    }
-
-    #concentrate-glint {
+    #imageCenterer1 {
       display: block;
       width: 100%;
       max-width: 90vw;
