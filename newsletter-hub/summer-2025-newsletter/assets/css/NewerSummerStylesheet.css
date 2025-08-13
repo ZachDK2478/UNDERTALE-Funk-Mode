@@ -110,12 +110,6 @@ audio {
   text-stroke-color: rgb(139, 0, 139);
 }
 
-.outlined-glint {
-  color: #9ADCD6;
-  -webkit-text-stroke-color: rgb(66, 90, 90);
-  text-stroke-color: rgb(66, 90, 90);
-}
-
 .outlined-froggit {
   color: white;
   -webkit-text-stroke-color: rgb(83, 83, 83);
@@ -150,6 +144,12 @@ audio {
   color: #6B1C1F;
   -webkit-text-stroke-color: #6B1C1F;
   text-stroke-color: #6B1C1F;
+}
+
+.outlined-glint {
+  color: #9ADCD6;
+  -webkit-text-stroke-color: rgb(66, 90, 90);
+  text-stroke-color: rgb(66, 90, 90);
 }
 
 /* ---------- Paragraphs ---------- */
