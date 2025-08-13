@@ -247,3 +247,10 @@ p {
 .three-quarters-size {
   transform: scale(0.75);
 }
+
+/* DEBUG CODE! */
+
+
+    * {
+      outline: 2px dashed red;
+    }
