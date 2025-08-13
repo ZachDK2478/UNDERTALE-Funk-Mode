@@ -181,9 +181,22 @@ body{
     flex-direction: column;
     margin: 0 auto;
     color: red;
-    -webkit-text-stroke: 6px rgb(64, 0, 0);
+    -webkit-text-stroke: 6px rgb(80, 0, 0);
     paint-order: stroke fill;
-    text-stroke: 6px rgb(64 0 0);
+    text-stroke: 6px rgb(80 0 0);
+    font-size: 40px;
+    text-align: center;
+}
+
+.outlined-chara {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    color: darkred;
+    -webkit-text-stroke: 6px rgb(70, 0, 0);
+    paint-order: stroke fill;
+    text-stroke: 6px rgb(70 0 0);
     font-size: 40px;
     text-align: center;
 }
@@ -218,6 +231,9 @@ body {
     .outlined-sc {
         font-size: 21px;
     }
+    .outlined-chara {
+        font-size: 21px;
+    }
 }
 
 /* ---------- Section Separators ---------- */
@@ -243,10 +259,19 @@ body {
     padding-bottom: 4rem;
 }
 
+/* LV Crusher Test */
+#chara-idle {
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
 /* ---------- Song Teaser Audio Styles ---------- */
 
-/* Soulcore */
-#soulcore {
+#audio {
     align-items: center;
     margin: 0 auto;
     display: flex;
