@@ -132,14 +132,24 @@ audio {
   color: #BE8873;
   -webkit-text-stroke-color: #613535;
   text-stroke-color: #613535;
-  display: inline;
 }
 
 .outlined-spunkyreq2 {
   color: #00B3FF;
   -webkit-text-stroke-color: #004586;
   text-stroke-color: #004586;
-  display: inline;
+}
+
+.outlined-zachdk {
+  color: magenta;
+  -webkit-text-stroke-color: darkmagenta;
+  text-stroke-color: darkmagenta;
+}
+
+.outlined-sobanoodles {
+  color: #6B1C1F;
+  -webkit-text-stroke-color: #6B1C1F;
+  text-stroke-color: #6B1C1F;
 }
 
 /* ---------- Paragraphs ---------- */
