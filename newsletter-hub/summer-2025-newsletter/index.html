@@ -131,8 +131,37 @@
         </p>
 
     </div>
+
     <audio id="croak" src="assets/audio/sfx/croak.wav"></audio>
-    <img src="assets/images/little-sprites/Ribbit.gif" onclick="let audio = document.getElementById('croak'); audio.currentTime = 0; audio.play();" id="froggif" alt="Froggif" title="Froggif">
+    <audio id="undertalefan" src="assets/audio/sfx/icantread.wav"></audio>
+
+    <!-- 15 undertale fan script -->
+
+     <script>
+        let frogClickCount = 0;
+
+        function playFrogSound() {
+            frogClickCount++;
+
+            let audio;
+            if (frogClickCount === 15) {
+            audio = document.getElementById('undertalefan');
+            frogClickCount = 0;
+            } else {
+            audio = document.getElementById('croak');
+            }
+
+            audio.currentTime = 0;
+            audio.play();
+        }
+    </script>
+
+
+    <img src="assets/images/little-sprites/Ribbit.gif"
+        onclick="playFrogSound()"
+        id="froggif"
+        alt="Froggif"
+        title="Froggif">
 
     <h1 class="outlined"> The State of the OST </h1>
 
