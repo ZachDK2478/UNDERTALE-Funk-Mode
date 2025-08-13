@@ -130,6 +130,18 @@ audio {
   text-stroke-color: #362C61;
 }
 
+.outlined-spunkyreq1 {
+  color: #BE8873;
+  -webkit-text-stroke-color: #613535;
+  text-stroke-color: #613535;
+}
+
+.outlined-spunkyreq2 {
+  color: #00B3FF;
+  -webkit-text-stroke-color: #004586;
+  text-stroke-color: #004586;
+}
+
 /* ---------- Paragraphs ---------- */
 p {
   color: white;
