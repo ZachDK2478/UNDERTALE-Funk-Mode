@@ -170,7 +170,20 @@ body{
     color: yellow;
     -webkit-text-stroke: 6px rgb(64 64 0);
     paint-order: stroke fill;
-    text-stroke: 6px rgb(0, 0, 0);
+    text-stroke: 6px rgb(64 64 0);
+    font-size: 40px;
+    text-align: center;
+}
+
+.outlined-sc {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    color: red;
+    -webkit-text-stroke: 6px rgb(64, 0, 0);
+    paint-order: stroke fill;
+    text-stroke: 6px rgb(64 0 0);
     font-size: 40px;
     text-align: center;
 }
@@ -200,6 +213,9 @@ body {
         font-size: 16px;
     }
     .outlined {
+        font-size: 21px;
+    }
+    .outlined-sc {
         font-size: 21px;
     }
 }
