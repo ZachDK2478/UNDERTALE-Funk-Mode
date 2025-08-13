@@ -1,7 +1,6 @@
-/* Set up PixelOperator Font */
 @font-face {
-  font-family: 'PixelOperator';
-  src: url('../fonts/PixelOperator-Bold.ttf') format('truetype');
+  font-family: 'Funkertale';
+  src: url('../fonts/Funkertale.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
@@ -15,7 +14,7 @@ body {
   background-position: center;
   background-color: black;
   background-size: cover;
-  font-family: 'PixelOperator';
+  font-family: 'Funkertale';
   margin: 0;
   padding: 0;
 
@@ -38,5 +37,5 @@ p {
 }
 
 .pixel-font {
-  font-family: 'PixelOperator';
+  font-family: 'Funkertale';
 }
