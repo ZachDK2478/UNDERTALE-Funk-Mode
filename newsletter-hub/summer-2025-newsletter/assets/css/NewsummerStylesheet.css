@@ -201,6 +201,19 @@ body{
     text-align: center;
 }
 
+.outlined-perseverance {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    color: magenta;
+    -webkit-text-stroke: 6px rgb(139, 0, 139);
+    paint-order: stroke fill;
+    text-stroke: 6px rgb(139 0 139);
+    font-size: 40px;
+    text-align: center;
+}
+
 p {
     color: white;
 }
@@ -232,6 +245,9 @@ body {
         font-size: 21px;
     }
     .outlined-chara {
+        font-size: 21px;
+    }
+    .outlined-perseverance {
         font-size: 21px;
     }
 }
