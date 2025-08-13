@@ -230,3 +230,20 @@ p {
     padding-bottom: 5rem;
   }
 }
+
+/* ---------- Shrink Images ---------- */
+
+/* Half-size */
+.half-size {
+  transform: scale(0.5);
+}
+
+/* Quarter-size */
+.quarter-size {
+  transform: scale(0.25);
+}
+
+/* Three-quarters Size */
+.three-quarters-size {
+  transform: scale(0.75);
+}
