@@ -201,7 +201,7 @@ body{
     text-align: center;
 }
 
-.outlined-perseverance {
+.outlined-persevere {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -247,7 +247,7 @@ body {
     .outlined-chara {
         font-size: 21px;
     }
-    .outlined-perseverance {
+    .outlined-persevere {
         font-size: 21px;
     }
 }
