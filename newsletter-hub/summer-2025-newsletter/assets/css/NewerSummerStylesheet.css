@@ -118,6 +118,18 @@ audio {
   text-stroke-color: rgb(66, 90, 90);
 }
 
+.outlined-froggit {
+  color: white;
+  -webkit-text-stroke-color: rgb(83, 83, 83);
+  text-stroke-color: rgb(83, 83, 83);
+}
+
+.outlined-snowdrake {
+  color: #B7D0E3; 
+  -webkit-text-stroke-color: #362C61;
+  text-stroke-color: #362C61;
+}
+
 /* ---------- Paragraphs ---------- */
 p {
   color: white;
