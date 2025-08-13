@@ -98,14 +98,32 @@ body{
     }   
 }
 
+@media (max-width: 600px) {
+    #gameover-teaser {
+        display: block;
+        width: 100%;
+        max-width: 90vw;
+        height: auto;
+        margin-inline: auto;
+    }
+
+    #fuck {
+        display: block;
+        width: 100%;
+        max-width: 90vw;
+        height: auto;
+        margin-inline: auto;
+    }
+}
+
 /* ---------- Links ---------- */
 #LINKS {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  margin-top: 20px;
+  gap: 0px;
+  margin-top: 0px;
   list-style: none;
   padding: 0;
 }
@@ -143,8 +161,6 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 0;
-  padding-bottom: var(--space-2);
 }
 
 .beachgoers-image img {
@@ -156,8 +172,11 @@ body{
 @media (max-width: 600px) {
   .beachgoers-image {
     transform: none;
-    padding-inline: var(--space-2);
     overflow-x: hidden;
+    margin-top: -5rem;
+    margin-bottom: -5rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
   }
 }
 
@@ -340,3 +359,14 @@ body {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+
+
+/* DEBUG CODE! */
+
+/*
+
+    * {
+      outline: 2px dashed red;
+    }
+
+/*
