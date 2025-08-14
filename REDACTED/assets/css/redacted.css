@@ -1,0 +1,8 @@
+.redacted-spr {
+    display: block;
+    max-width: 90vw;
+    align-items: center;
+    margin: 0;
+    margin-inline: auto;
+    height: auto;
+}

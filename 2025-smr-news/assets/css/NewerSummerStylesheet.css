@@ -197,6 +197,16 @@ p {
   filter: brightness(1.5);
 }
 
+/* REDACTED */
+.hidden-link {
+  color: inherit;
+  text-decoration: none;
+  /* cursor: text; */
+}
+.hidden-link:hover {
+  cursor: pointer;          /* Shows it's clickable */
+}
+
 /* ---------- Beachgoers ---------- */
 .beachgoers-image {
   display: flex;
