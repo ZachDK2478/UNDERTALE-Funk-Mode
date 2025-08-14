@@ -6,7 +6,7 @@
 }
 
 html {
-    font-size: 19.5px;
+    font-size: 16px;
 }
 
 body {
@@ -16,7 +16,6 @@ body {
     background-size: cover;
     color: white;
     font-family: 'Funkertale';
-    margin: 0;
     padding: 0;
 }
 
@@ -39,7 +38,6 @@ p {
     word-wrap: break-word;
     margin: auto;
     margin: 0 auto 1rem auto;
-    /* top 0, horizontal auto (center), bottom 1rem */
     max-width: 850px;
     line-height: 1.2;
 }
@@ -53,9 +51,27 @@ p {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 80%;
 }
 
 .linkYellow {
     color: yellow;
+}
+
+.characters {
+    text-align: center;
+}
+
+#beef-strogan {
+    margin: auto;
+    align-content: center;
+    transform: scale(0.9) translateX(-40px) translateY(38px);
+    margin-bottom: 15px;
+    margin-right: 50px;
+}
+
+#geef-spin {
+    margin: auto;
+    align-content: center;
+    transform: scale(0.8) translateY(54.5px) translateX(25px); 
 }
