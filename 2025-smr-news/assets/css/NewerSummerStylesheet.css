@@ -61,6 +61,14 @@ body {
   padding-bottom: 40px;
 }
 
+.video-center {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 audio {
   display: block;
   max-width: 90vw;
@@ -290,6 +298,12 @@ p {
     margin-bottom: -5rem;
     padding-top: 4rem;
     padding-bottom: 5rem;
+  }
+  .video-center {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 10px;
   }
 }
 
