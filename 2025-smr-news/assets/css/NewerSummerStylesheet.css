@@ -302,9 +302,11 @@ p {
     padding-bottom: 5rem;
   }
   .video-center {
+    display: block;
     width: 100%;
     max-width: 640px;
     margin: 0 auto;
+    margin-inline: auto;
     padding: 0 10px;
   }
 }
