@@ -1,26 +1,71 @@
 /* ——————— BACKGROUND ——————— */
 body {
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0;
+  background-color: black;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+/* ——————— CURSOR ——————— */
+* {
+  font-family: 'undertail';
+  cursor: url("../images/mouse/fmCurs_heart.png"), auto;
+}
+
+.button,
+.link-item img:hover {
+  cursor: url("../images/mouse/fmCurs_heart_Hover.png"), pointer;
+}
+
+/* ——————— FONTS ——————— */
+@font-face {
+  font-family: 'undertail';
+  src: url('../fonts/Funkertale.ttf');
 }
 
 /* ——————— IMAGES ——————— */
+.image-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 90vw;
+  margin-inline: auto;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
 .notreal {
-    max-width: 90vw;
-    height: auto;
-    transform: scale(0.6);
+  width: 550px; 
+  height: auto;
 }
-.spider {
-    max-width: 90vw;
-    height: auto;
+
+.teto {
+  width: 550px;
+  height: auto;
+  padding-bottom: 100px;
 }
+
 
 /* ——————— AUDIO ——————— */
 audio {
     display: none;
+}
+
+/* ——————— ACCESSIBILITY ——————— */
+@media (max-width: 600px) {
+  .image-center {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .notreal,
+  .teto {
+    width: 90vw;
+    height: auto;
+    padding-bottom: 40px;
+  }
 }
