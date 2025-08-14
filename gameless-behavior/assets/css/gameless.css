@@ -15,6 +15,10 @@ body {
     height: auto;
     transform: scale(0.6);
 }
+.spider {
+    max-width: 90vw;
+    height: auto;
+}
 
 /* ——————— AUDIO ——————— */
 audio {
