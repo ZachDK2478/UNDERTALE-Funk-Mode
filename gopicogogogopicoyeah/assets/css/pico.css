@@ -1,0 +1,47 @@
+/* ——————— BACKGROUND ——————— */
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ——————— IMAGES ——————— */
+.img {
+    max-width: 90vw;
+    height: auto;
+}
+
+/* ——————— AUDIO ——————— */
+audio {
+    display: none;
+}
+
+/* ——————— TEXT ——————— */
+.outlined-text {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  paint-order: stroke fill;
+  font-size: 60px;
+  -webkit-text-stroke: 6px;
+  text-stroke: 6px;
+}
+
+.outlined-pico {
+  color: #E65923;
+  -webkit-text-stroke-color: #072F04;
+  text-stroke-color: #072F04;
+  filter: hue-rotate(0deg);
+  animation: shifter 0.5s ease-in-out infinite;
+}
+
+@keyframes shifter {
+  0%   { filter: hue-rotate(0deg); }
+  50%  { filter: hue-rotate(180deg); }
+  100% { filter: hue-rotate(360deg); }
+}
