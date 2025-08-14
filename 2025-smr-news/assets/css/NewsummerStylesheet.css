@@ -1,0 +1,364 @@
+/* 
+
+    Ignore the unknown property: 'text-stroke' error. VSC does that here because it's an upcoming standard
+    but VSC doesn't have too much support for it yet. Just leave it in, or take it away if you want. I don't care lol
+    
+*/
+
+/* ---------- Define Space ---------- */
+:root {
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+}
+
+/* ---------- Fonts ---------- */
+@font-face {
+    font-family: 'undertail';
+    src: url('../fonts/Funkertale.ttf');
+}
+
+
+/* ---------- Cursor ---------- */
+/* Edit later */
+*{
+    font-family: 'undertail';
+    cursor: url("../images/mouse/fmCurs_heart.png"), auto;
+    
+}
+
+body{
+    cursor: url("../images/mouse/fmCurs_heart.png"), auto;
+    margin: 0px;
+}
+
+.button {
+    cursor: url("../images/mouse/fmCurs_heart_Hover.png"), pointer;
+}
+
+.link-item img {
+    cursor: url("../images/mouse/fmCurs_heart.png"), auto;
+}
+
+.link-item img:hover {
+    cursor: url("../images/mouse/fmCurs_heart_Hover.png"), pointer;
+}
+
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: var(--max-content);
+  margin-inline: auto;
+  padding: var(--space-3);
+}
+
+.header {
+  text-align: center;
+  padding-block: var(--space-3);
+}
+
+.logo {
+  width: 100%;
+  max-width: clamp(160px, 90vw, 520px);
+  height: auto;
+  display: block;
+  margin-inline: auto;
+}
+
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+/* ---------- Accessibility ---------- */
+@media (orientation: landscape) and (min-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+
+    #logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 90vw;
+        height: auto;
+    }
+
+    #beachgoers {
+        display: block;
+        width: 100%;
+        max-width: 90vw;
+        height: auto;
+        margin-inline: auto;
+    }   
+}
+
+@media (max-width: 600px) {
+    #imageCenterer1 {
+      display: block;
+      width: 100%;
+      max-width: 90vw;
+      height: auto;
+      margin-inline: auto;
+    }
+}
+
+/* ---------- Links ---------- */
+#LINKS {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  margin-top: 0px;
+  list-style: none;
+  padding: 0;
+}
+
+#LINKS li {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#LINKS li img {
+  display: block;
+  max-width: 100px;
+  height: auto;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+#LINKS li:hover img {
+  filter:  brightness(1.5);
+}
+
+/* ---------- Custom Wrappers ---------- */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--space-3);
+  padding-bottom: 0;
+}
+
+.beachgoers-image {
+  max-width: 100%;
+  transform: scale(0.6);
+  transform-origin: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.beachgoers-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .beachgoers-image {
+    transform: none;
+    overflow-x: hidden;
+    margin-top: -5rem;
+    margin-bottom: -5rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* ---------- Newsletter Text Handling ---------- */
+.outlined {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    color: yellow;
+    -webkit-text-stroke: 6px rgb(64 64 0);
+    paint-order: stroke fill;
+    text-stroke: 6px rgb(64 64 0);
+    font-size: 40px;
+    text-align: center;
+}
+
+.outlined-sc {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    color: red;
+    -webkit-text-stroke: 6px rgb(80, 0, 0);
+    paint-order: stroke fill;
+    text-stroke: 6px rgb(80 0 0);
+    font-size: 40px;
+    text-align: center;
+}
+
+.outlined-chara {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    color: darkred;
+    -webkit-text-stroke: 6px rgb(70, 0, 0);
+    paint-order: stroke fill;
+    text-stroke: 6px rgb(70 0 0);
+    font-size: 40px;
+    text-align: center;
+}
+
+.outlined-persevere {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    color: magenta;
+    -webkit-text-stroke: 6px rgb(139, 0, 139);
+    paint-order: stroke fill;
+    text-stroke: 6px rgb(139 0 139);
+    font-size: 40px;
+    text-align: center;
+}
+
+.outlined-glint {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    color: #9ADCD6;
+    -webkit-text-stroke: 6px rgb(66, 90, 90);
+    paint-order: stroke fill;
+    text-stroke: 6px rgb(66 90 90);
+    font-size: 40px;
+    text-align: center;
+}
+
+p {
+    color: white;
+}
+
+.paragraph {
+    align-items: center;
+    margin: 0 auto;
+    max-width: 60ch;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 21px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@media (max-width: 600px) {
+    .paragraph {
+        font-size: 16px;
+    }
+    .outlined {
+        font-size: 21px;
+    }
+    .outlined-sc {
+        font-size: 21px;
+    }
+    .outlined-chara {
+        font-size: 21px;
+    }
+    .outlined-persevere {
+        font-size: 21px;
+    }
+    .outlined-glint {
+        font-size: 21px;
+    }
+}
+
+/* ---------- Section Separators ---------- */
+
+#froggif { /* GIF of Froggit */
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: -2.5rem;
+    padding-bottom: 5.5rem;
+}
+
+/* ---------- Song Teaser Images ---------- */
+
+/* Soulcore */
+#gfriend-odd { 
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* LV Crusher Test */
+#chara-idle {
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* Perseverance */
+#gameover-teaser {
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* ---------- Song Teaser Audio Styles ---------- */
+
+#audio {
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* ---------- Coding Images ---------- */
+#fuck {
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#concentrate-glint {
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+/* DEBUG CODE! */
+
+/*
+
+    * {
+      outline: 2px dashed red;
+    }
+
+/*

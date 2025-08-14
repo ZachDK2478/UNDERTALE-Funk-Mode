@@ -1,0 +1,110 @@
+/* Set up PixelOperator Font */
+@font-face {
+  font-family: 'PixelOperator';
+  src: url('../fonts/PixelOperator-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.pixel-font {
+  font-family: 'PixelOperator';
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: 'PixelOperator';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  text-align: center;
+}
+
+#mainContent {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 900px;
+  padding: 2rem;
+}
+
+/* RESPONSIVENESS */
+/* Base Sizes */
+
+html {
+  font-size: 18px; /* Base size for desktop */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px; /* Slightly smaller on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px; /* Smaller base size on phones */
+  }
+}
+
+/* Creates padding for smaller screens to avoid the same issue as the Summer 2025 Newsletter. */
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  p {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Use rem throughout to handle responsive text scaling! */
+
+h1 {
+  font-size: 3rem; 
+  margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 1.4;
+  margin: 0 auto 1rem auto;
+  max-width: 850px;
+  word-wrap: break-word;
+}
+
+#logo {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
+
+img {
+    display: block;
+    margin: 15px auto;
+    width: 45%;
+    max-width: fit-content;
+    height: 45%;
+    object-fit: contain;
+}
+
+video {
+    width: 45%;
+    max-width: fit-content;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 15px auto;
+}
