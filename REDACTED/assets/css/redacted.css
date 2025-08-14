@@ -1,8 +1,29 @@
-.redacted-spr {
-    display: block;
-    max-width: 90vw;
-    align-items: center;
+/* ——————— BACKGROUND ——————— */
+body {
+    background-color: #ffffff;
     margin: 0;
-    margin-inline: auto;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ——————— IMAGES ——————— */
+.redacted-spr {
+    max-width: 90vw;
     height: auto;
+    margin-top: 45px;
+    animation: redacted-anim 2.6s ease-in-out infinite;
+}
+
+@keyframes redacted-anim {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* ——————— AUDIO ——————— */
+audio {
+    display: none;
 }
