@@ -135,9 +135,9 @@ audio {
 }
 
 .outlined-zachdk {
-  color: magenta;
-  -webkit-text-stroke-color: darkmagenta;
-  text-stroke-color: darkmagenta;
+  color: darkblue;
+  -webkit-text-stroke-color: #500050;
+  text-stroke-color: #500050;
 }
 
 .outlined-sobanoodles {
