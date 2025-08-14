@@ -1,0 +1,22 @@
+/* ——————— BACKGROUND ——————— */
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ——————— IMAGES ——————— */
+.notreal {
+    max-width: 90vw;
+    height: auto;
+    transform: scale(0.6);
+}
+
+/* ——————— AUDIO ——————— */
+audio {
+    display: none;
+}
