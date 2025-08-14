@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'PixelOperator';
-    src: url('../fonts/PixelOperator-Bold.ttf') format('truetype');
+    font-family: 'Funkertale';
+    src: url('../fonts/Funkertale.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
@@ -15,13 +15,13 @@ body {
     background-color: black;
     background-size: cover;
     color: white;
-    font-family: 'PixelOperator';
+    font-family: 'Funkertale';
     margin: 0;
     padding: 0;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: white;
     margin-bottom: 1rem;
 }
@@ -44,8 +44,8 @@ p {
     line-height: 1.2;
 }
 
-.pixel-font {
-    font-family: 'PixelOperator';
+.funkertale {
+    font-family: 'Funkertale';
 }
 
 .center {
