@@ -27,7 +27,7 @@ audio {
   text-align: center;
   margin: 0 auto;
   paint-order: stroke fill;
-  font-size: 60px;
+  font-size: clamp(24px, 6vw, 80px);
   -webkit-text-stroke: 6px;
   text-stroke: 6px;
 }
