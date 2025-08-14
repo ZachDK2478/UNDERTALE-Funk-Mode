@@ -60,7 +60,7 @@ body {
   height: auto;
   margin-inline: auto;
   padding-top: 10px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .video-center {
@@ -75,7 +75,7 @@ audio {
   max-width: 90vw;
   margin-inline: auto;
   padding-top: 0px;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
   align-items: center;
 }
 
@@ -175,6 +175,8 @@ p {
   text-align: center;
   font-size: 21px;
   padding-bottom: 2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 /* ---------- Links ---------- */
