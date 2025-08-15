@@ -37,7 +37,7 @@ audio {
   -webkit-text-stroke-color: #072F04;
   text-stroke-color: #072F04;
   filter: hue-rotate(0deg);
-  animation: shifter 0.5s ease-in-out infinite;
+  animation: shifter 1s ease-in-out infinite;
 }
 
 @keyframes shifter {
