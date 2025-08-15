@@ -54,7 +54,6 @@
             }
 
             if (event.data === YT.PlayerState.PLAYING) {
-            console.log("⏸ Pausing bgMusic");
             bgMusic.pause();
             } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
             setTimeout(() => {
@@ -66,9 +65,8 @@
                 }
                 });
                 if (!anyPlaying) {
-                console.log("▶️ Resuming bgMusic");
                 bgMusic.play().catch(() => {
-                    console.warn("Autoplay blocked on resume.");
+                    // Silent autoplay block.
                 });
                 }
             }, 300);
