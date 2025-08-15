@@ -42,7 +42,9 @@ body {
 }
 
 .button,
-.link-item img:hover {
+.link-item,
+.link-yellow,
+img:hover {
   cursor: url("../images/mouse/fmCurs_heart_Hover.png"), pointer;
 }
 
@@ -308,6 +310,11 @@ p {
     margin-inline: auto;
     padding: 0 10px;
   }
+}
+
+.link-yellow {
+  color: yellow;
+  text-decoration: none;
 }
 
 /* DEBUG CODE! */
