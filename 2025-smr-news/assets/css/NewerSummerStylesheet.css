@@ -43,8 +43,7 @@ body {
 
 .button,
 .link-item,
-.link-yellow,
-img:hover {
+.link-yellow {
   cursor: url("../images/mouse/fmCurs_heart_Hover.png"), pointer;
 }
 
