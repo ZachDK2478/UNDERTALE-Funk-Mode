@@ -47,31 +47,11 @@
 
 <body>
     <audio id="beep-player"></audio>
-    <script>
-        const beepSounds = [
-            "assets/audio/sfx/Beep1.ogg",
-            "assets/audio/sfx/Beep2.ogg",
-            "assets/audio/sfx/Beep3.ogg",
-            "assets/audio/sfx/Beep4.ogg",
-            "assets/audio/sfx/Beep5.ogg"
-        ];
-
-        function getRandomInt(max) {
-            return Math.floor(Math.random() * max);
-        }
-
-        function playBfriendNote() {
-            const audio = document.getElementById('beep-player');
-            const randomIndex = getRandomInt(beepSounds.length);
-            audio.src = beepSounds[randomIndex];
-            audio.currentTime = 0;
-            audio.play();
-        }
-    </script>
+    <audio id="beep-spinner"></audio>
 
     <div class="characters">
         <img src="assets/images/geef-spin-transp-fullspin.gif" id="geef-spin" class="geef-spin" alt="gfriend spinning"
-            title="* Speen!">
+            title="* Speen!" onclick="playGfriendNote()">
         <img src="assets/images/beef-stroganoff.png" id="beef-strogan" alt="bfriend looking confused"
             title="* You wonder what the highest speed of a cantelope is. You are also wondering why your girlfriend is spinning."
             onclick="playBfriendNote()">
@@ -95,4 +75,7 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
+
+    <script src="assets/javascript/bfriendSing.js"></script>
+    <script src="assets/javascript/gfriendSing.js"></script>
 </body>
