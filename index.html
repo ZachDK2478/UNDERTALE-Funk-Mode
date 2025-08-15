@@ -28,6 +28,53 @@
 
     <!-- External Stylesheet -->
     <link rel="stylesheet" href="assets/css/stylesheet-thesequel.css" />
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="assets/javascript/introScreen.js" defer></script>
+    <script>
+        const playerIds = ["yt-player1", "yt-player2"];
+        const players = [];
+
+        function onYouTubeIframeAPIReady() {
+            console.log("✅ YouTube API is ready");
+            playerIds.forEach((id) => {
+            const player = new YT.Player(id, {
+                events: {
+                onStateChange: onPlayerStateChange
+                }
+            });
+            players.push(player);
+            });
+        }
+
+        function onPlayerStateChange(event) {
+            if (!window.bgMusicReady || !window.bgMusic) {
+            setTimeout(() => onPlayerStateChange(event), 200);
+            return;
+            }
+
+            if (event.data === YT.PlayerState.PLAYING) {
+            console.log("⏸ Pausing bgMusic");
+            bgMusic.pause();
+            } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
+            setTimeout(() => {
+                const anyPlaying = players.some(p => {
+                try {
+                    return p.getPlayerState() === YT.PlayerState.PLAYING;
+                } catch (e) {
+                    return false;
+                }
+                });
+                if (!anyPlaying) {
+                console.log("▶️ Resuming bgMusic");
+                bgMusic.play().catch(() => {
+                    console.warn("Autoplay blocked on resume.");
+                });
+                }
+            }, 300);
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -73,13 +120,32 @@
     <br><br><br><br><br><br>
 
     <div class="funkModeTrailers">
-      <iframe src="https://www.youtube.com/embed/JD6YXdHVSAY?si=ZaGTd3J7WBniyw_D" class="trailerEmbed" allow="picture-in-picture;" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/6XD1vBZzIW8?si=Pvol1EW5gTUwe-h4" class="trailerEmbed" allow="picture-in-picture;" allowfullscreen></iframe>
+        <iframe
+            id="yt-player1"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/JD6YXdHVSAY?enablejsapi=1"
+            loading="lazy"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
+        <iframe
+            id="yt-player2"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/6XD1vBZzIW8?enablejsapi=1"
+            loading="lazy"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
     </div>
 
     <br><br><br><br><br><br><br><br><br><br><br><br>
-
-    <!-- JavaScript to handle intro screen. -->
-    <script src="assets/javascript/introScreen.js"></script>
 
 </body>
