@@ -135,6 +135,7 @@ p {
 /* ──────── Individual Dev Effects ──────── */
 .creditZachDK,
 .creditGontheGhost,
+.creditSpunkyTunky,
 .creditGlintfish,
 .creditGian,
 .creditHIGG {
@@ -143,17 +144,30 @@ p {
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
+/* ZachDK */
 .creditZachDK:hover       { color: purple; }
-.creditZachDK:focus       { color: green; text-shadow: 0 0 6px 3px yellow; border-radius: 2px; }
+.creditZachDK:focus       { color: green; border-radius: 2px; }
 
+/* Gon */
 .creditGontheGhost:hover  { color: lightseagreen; }
-.creditGontheGhost:focus  { color: skyblue; text-shadow: 0 0 6px 3px yellow; border-radius: 2px; }
+.creditGontheGhost:focus  { color: skyblue; border-radius: 2px; }
 
+/* SpunkyTunky */
+.creditSpunkyTunky:hover  { color: #00B3FF;  }
+.creditSpunkyTunky:focus  { color: #BE8873; border-radius: 2px; }
+
+/* Glintfish */
 .creditGlintfish:hover    { color: #9ADCD6; }
-.creditGlintfish:focus    { color: #74433F; text-shadow: 0 0 6px 3px yellow; border-radius: 2px; }
+.creditGlintfish:focus    { color: #74433F; border-radius: 2px; }
 
+/* Gian */
 .creditGian:hover         { color: #C82D2F; }
-.creditGian:focus         { color: #FFC155; text-shadow: 0 0 6px 3px #FFC155; border-radius: 2px; }
+.creditGian:focus         { color: #FFC155; border-radius: 2px; }
 
+/* HIGG */
 .creditHIGG:hover         { color: orange; }
-.creditHIGG:focus         { color: lime; text-shadow: 0 0 6px 3px yellow; border-radius: 2px; }
+.creditHIGG:focus         { color: lime; border-radius: 2px; }
+
+/* Danon */
+.creditDanon:hover         { color: orange; }
+.creditDanon:focus         { color: lime; border-radius: 2px; }
