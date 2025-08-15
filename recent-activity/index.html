@@ -3,7 +3,8 @@
 
 <head>
 
-    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/ZachDK2478/UNDERTALE-Funk-Mode/refs/heads/main/images/favicon/utfm-perseverance.ico">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://raw.githubusercontent.com/ZachDK2478/UNDERTALE-Funk-Mode/refs/heads/main/images/favicon/utfm-perseverance.ico">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,9 +13,11 @@
     <title>UNDERTALE: Funk-Mode Recent Activity</title>
 
     <meta name="description" content="Recent UNDERTALE: Funk-Mode Developer Activity">
-    <meta name="keywords" content="UNDERTALE, Funk-Mode, UTFM, FNF, Mod, Updates, Developer Activity, Developers, Activity">
-   
-    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/ZachDK2478/UNDERTALE-Funk-Mode/refs/heads/main/images/favicon/utfm-perseverance.ico">
+    <meta name="keywords"
+        content="UNDERTALE, Funk-Mode, UTFM, FNF, Mod, Updates, Developer Activity, Developers, Activity">
+
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://raw.githubusercontent.com/ZachDK2478/UNDERTALE-Funk-Mode/refs/heads/main/images/favicon/utfm-perseverance.ico">
 
     <!-- UNDERTALE: Funk-Mode SEO Tag -->
     <meta property="og:title" content="UNDERTALE: Funk-Mode" />
@@ -23,10 +26,12 @@
     <link rel="canonical" href="https://zachdk2478.github.io/undertale-funk-mode/recent-activity/" />
     <meta property="og:url" content="https://zachdk2478.github.io/undertale-funk-mode/recent-activity/" />
     <meta property="og:site_name" content="Recent Developer Activity" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/ZachDK2478/UNDERTALE-Funk-Mode/refs/heads/main/assets/images/important/utfm_logo_zdkver.png" />
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/ZachDK2478/UNDERTALE-Funk-Mode/refs/heads/main/assets/images/important/utfm_logo_zdkver.png" />
     <meta property="og:type" content="article" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:image" content="https://raw.githubusercontent.com/ZachDK2478/UNDERTALE-Funk-Mode/refs/heads/main/assets/images/important/utfm_logo_zdkver.png" />
+    <meta property="twitter:image"
+        content="https://raw.githubusercontent.com/ZachDK2478/UNDERTALE-Funk-Mode/refs/heads/main/assets/images/important/utfm_logo_zdkver.png" />
     <meta property="twitter:title" content="UNDERTALE: Funk-Mode" />
     <meta name="twitter:site" content="@UTfunkmode" />
     <!-- End of UNDERTALE: Funk-Mode SEO Tag -->
@@ -41,19 +46,53 @@
 </head>
 
 <body>
+    <audio id="beep-player"></audio>
+    <script>
+        const beepSounds = [
+            "assets/audio/sfx/Beep1.ogg",
+            "assets/audio/sfx/Beep2.ogg",
+            "assets/audio/sfx/Beep3.ogg",
+            "assets/audio/sfx/Beep4.ogg",
+            "assets/audio/sfx/Beep5.ogg"
+        ];
 
-    <!-- Developer Interview: https://www.youtube.com/live/Nfqz-xaS6qg -->
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function playBfriendNote() {
+            const audio = document.getElementById('beep-player');
+            const randomIndex = getRandomInt(beepSounds.length);
+            audio.src = beepSounds[randomIndex];
+            audio.currentTime = 0;
+            audio.play();
+        }
+    </script>
+
     <div class="characters">
-        <img src="assets/images/geef-spin-transp-fullspin.gif" id="geef-spin" class="geef-spin" alt="gfriend spinning" title="* Speen!">
-        <img src="assets/images/beef-stroganoff.png" id="beef-strogan" alt="bfriend looking confused" title="* You wonder what the highest speed of a cantelope is. You are also wondering why your girlfriend is spinning.">
+        <img src="assets/images/geef-spin-transp-fullspin.gif" id="geef-spin" class="geef-spin" alt="gfriend spinning"
+            title="* Speen!">
+        <img src="assets/images/beef-stroganoff.png" id="beef-strogan" alt="bfriend looking confused"
+            title="* You wonder what the highest speed of a cantelope is. You are also wondering why your girlfriend is spinning."
+            onclick="playBfriendNote()">
     </div>
 
     <audio id="silly" src="assets/audio/music/devroom-sobasong.ogg" autoplay loop>
         Your browser does not support the audio element.
     </audio>
-    
+
     <div class="center">
         <h1 class="funkertale"> Recent Developer Activity </h1>
-        <h3 class="funkertale"> <a href="https://www.youtube.com/live/Nfqz-xaS6qg" class="linkYellow" target="_blank"> Developer Interview with the Hunterman9924 Funkin' Interview Podcast </a> </h3>
+
+        <br>
+
+        <h3 class="funkertale"> <a href="https://www.youtube.com/live/Nfqz-xaS6qg" class="linkYellow" target="_blank">
+                Developer Interview with the Hunterman9924 Funkin' Interview Podcast </a> </h3>
+
+        <h3 class="funkertale"> Stay a While (Theme of Toriel's Home) Official YT Upload </h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lumTkcUsmJ4?si=-4CRtLmRxpH23aLn"
+            loading="lazy" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </body>
