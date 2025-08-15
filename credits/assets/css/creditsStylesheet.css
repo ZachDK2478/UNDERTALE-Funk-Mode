@@ -51,6 +51,18 @@ p {
   word-wrap: break-word;
 }
 
+.black-outline {
+  filter:
+    drop-shadow( 0    0.5px 0 #000)
+    drop-shadow( 0   -0.5px 0 #000)
+    drop-shadow( 0.5px  0   0 #000)
+    drop-shadow(-0.5px  0   0 #000)
+    drop-shadow( 0.5px  0.5px 0 #000)
+    drop-shadow(-0.5px  0.5px 0 #000)
+    drop-shadow( 0.5px -0.5px 0 #000)
+    drop-shadow(-0.5px -0.5px 0 #000);
+}
+
 /* ──────── Responsiveness──────── */
 @media (max-width: 480px) {
   body {
@@ -78,15 +90,6 @@ p {
 }
 
 /* ──────── Credit Image Layout ──────── */
-.centerDevCreditImages,
-.centerDevCreditImages a {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  width: 50%;
-  line-height: 0;
-}
-
 .creditImagesSize {
   width: clamp(80px, 10vw, 120px);
   height: auto;
