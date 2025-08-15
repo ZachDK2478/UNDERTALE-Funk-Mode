@@ -70,12 +70,42 @@
                 Developer Interview with the Hunterman9924 Funkin' Interview Podcast </a> </h3>
 
         <h3 class="funkertale"> Stay a While (Theme of Toriel's Home) Official YT Upload </h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/lumTkcUsmJ4?si=-4CRtLmRxpH23aLn"
-            loading="lazy" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe
+        id="yt-player"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/lumTkcUsmJ4?enablejsapi=1"
+        loading="lazy"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+        </iframe>
     </div>
 
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="assets/javascript/bfriendSing.js"></script>
     <script src="assets/javascript/gfriendSing.js"></script>
+
+    <script>
+        let player;
+        const bgMusic = document.getElementById("silly");
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player("yt-player", {
+            events: {
+                onStateChange: onPlayerStateChange
+            }
+            });
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data === YT.PlayerState.PLAYING) {
+            bgMusic.volume = 0;
+            } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
+            bgMusic.volume = 1;
+            }
+        }
+    </script>
 </body>
