@@ -1,49 +1,57 @@
-/* Set up PixelOperator Font */
+/* ──────── Fonts ──────── */
 @font-face {
-  font-family: 'PixelOperator';
-  src: url('../fonts/PixelOperator-Bold.ttf') format('truetype');
+  font-family: 'funkertale';
+  src: url('../fonts/funkertale.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
-.pixel-font {
-  font-family: 'PixelOperator';
+.funkertale {
+  font-family: 'funkertale';
+}
+
+/* ──────── Base Layout ──────── */
+html {
+  font-size: 21px;
 }
 
 body {
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  background-attachment: fixed;
-  background-position: center;
-  background-color: black;
-  background-size: cover;
-  color: white;
-  font-family: 'PixelOperator';
   margin: 0;
   padding: 0;
-  
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'funkertale', sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
-  /* Smooth font rendering to avoid some display issues. Useful for accessibility. */
-  -webkit-font-smoothing: none;
-  image-rendering: smooth;
-
+  text-align: center;
 }
 
-/* RESPONSIVENESS */
-/* Base Sizes */
-
-html {
-  font-size: 18px; /* Base size for desktop */
+/* ──────── Headers & Paragraphs ──────── */
+header h1 {
+  margin: 2rem 0;
+  font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
-/* Creates padding for smaller screens to avoid the same issue as the Summer 2025 Newsletter. */
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
 
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  line-height: 1.4;
+  margin: 0 auto 1rem;
+  max-width: 850px;
+  word-wrap: break-word;
+}
+
+/* ──────── Responsiveness──────── */
 @media (max-width: 480px) {
   body {
     padding: 1rem;
@@ -54,44 +62,24 @@ html {
   }
 }
 
-/* Use rem throughout to handle responsive text scaling! */
-
-h1 {
-  font-size: 3rem; 
-  margin-bottom: 1rem;
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-p {
-  font-size: 2rem;
-  line-height: 1.4;
-  margin: 0 auto 1rem auto;
-  max-width: 850px;
-  word-wrap: break-word;
-}
-
-/* CSS Styles for Links */
+/* ──────── Link Styling ──────── */
 .linkYellow {
   color: yellow;
 }
 
 .linkYellow:hover {
-    color: orange;
-    text-decoration: underline;
+  color: orange;
 }
 
-.linkYellow:focus { /* Test with the Tab Key. */
-  outline: none; /* Remove default outline */
+.linkYellow:focus {
+  outline: none;
   box-shadow: 0 0 6px 3px yellow;
   border-radius: 2px;
 }
 
-/* Image Handling */
-.centerDevCreditImages, .centerDevCreditImages a {
+/* ──────── Credit Image Layout ──────── */
+.centerDevCreditImages,
+.centerDevCreditImages a {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -100,115 +88,36 @@ p {
 }
 
 .creditImagesSize {
-    width: 100%;
-    height: 100%;
-    max-width: 200px;
-    max-height: 200px;
+  width: clamp(80px, 10vw, 120px);
+  height: auto;
+  border-radius: 7px;
+  margin-bottom: 0.5rem;
+  transform: scale(1.5);
 }
 
-/* Custom styling for each individual developer. Unique effects & such. */
-/* ZACHDK */
-.creditZachDK {
-  color: white; /* Base Color */
-  text-decoration: none; /* Remove underline by default */
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+/* ──────── Developer Credit Styles ──────── */
+.credit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.creditZachDK:hover {
-  color: purple;
-  text-decoration: none; /* Keep it clean on hover */
-  border-radius: 2px;
-}
-
-.creditZachDK:focus {
-  outline: none;
-  text-shadow: 0 0 6px 3px yellow;
-  border-radius: 2px;
-  color: green; 
-}
-
-/* GON */
-.creditGontheGhost {
-  color: white; /* Base Color */
-  text-decoration: none; /* Remove underline by default */
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.creditGontheGhost:hover {
-  color: lightseagreen;
-  text-decoration: none; /* Keep it clean on hover */
-  border-radius: 2px;
-}
-
-.creditGontheGhost:focus {
-  outline: none;
-  text-shadow: 0 0 6px 3px yellow;
-  border-radius: 2px;
-  color: skyblue; 
-}
-
-/* GLINTFISH */
-.creditGlintfish {
-  color: white; /* Base Color */
-  text-decoration: none; /* Remove underline by default */
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.creditGlintfish:hover {
-  color: #9ADCD6;
-  text-decoration: none; /* Keep it clean on hover */
-  border-radius: 2px;
-}
-
-.creditGlintfish:focus {
-  outline: none;
-  text-shadow: 0 0 6px 3px yellow;
-  border-radius: 2px;
-  color: #74433F; 
-}
-
-/* GIAN & DANON */
-.creditGian {
-  color: white; /* Base Color */
-  text-decoration: none; /* Remove underline by default */
-  transition: color 0.3s ease, text-shadow 0.3s ease; 
-}
-
-.creditGian:hover {
-  color: #C82D2F;
-  text-decoration: none; /* Keep it clean on hover */
-  border-radius: 2px;
-}
-
-.creditGian:focus {
-    outline: none;
-    text-shadow: 0 0 6px 3px #FFC155;
-    border-radius: 2px;
-    color: #FFC155;
-}
-
-/* HIGG */
-.creditHIGG {
-  color: white; /* Base Color */
-  text-decoration: none; /* Remove underline by default */
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.creditHIGG:hover {
-  color: orange;
-  text-decoration: none; /* Keep it clean on hover */
-  border-radius: 2px;
-}
-
-.creditHIGG:focus {
-  outline: none;
-  text-shadow: 0 0 6px 3px yellow;
-  border-radius: 2px;
-  color: lime; 
+.credits {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+  margin-top: -0.5rem;
+  margin-bottom: 5rem;
 }
 
 .creditTextResizer {
-  font-size: 2rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  color: yellow;
+  text-decoration: none;
+  margin-top: 1rem;
 }
 
 .creditTextFloatAnim {
@@ -218,15 +127,33 @@ p {
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
 }
 
+/* ──────── Individual Dev Effects ──────── */
+.creditZachDK,
+.creditGontheGhost,
+.creditGlintfish,
+.creditGian,
+.creditHIGG {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
 
+.creditZachDK:hover       { color: purple; }
+.creditZachDK:focus       { color: green; text-shadow: 0 0 6px 3px yellow; border-radius: 2px; }
+
+.creditGontheGhost:hover  { color: lightseagreen; }
+.creditGontheGhost:focus  { color: skyblue; text-shadow: 0 0 6px 3px yellow; border-radius: 2px; }
+
+.creditGlintfish:hover    { color: #9ADCD6; }
+.creditGlintfish:focus    { color: #74433F; text-shadow: 0 0 6px 3px yellow; border-radius: 2px; }
+
+.creditGian:hover         { color: #C82D2F; }
+.creditGian:focus         { color: #FFC155; text-shadow: 0 0 6px 3px #FFC155; border-radius: 2px; }
+
+.creditHIGG:hover         { color: orange; }
+.creditHIGG:focus         { color: lime; text-shadow: 0 0 6px 3px yellow; border-radius: 2px; }
